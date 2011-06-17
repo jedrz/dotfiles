@@ -67,12 +67,12 @@ function date ()
 end
 
 function volume (mode)
-	if mode == "up" then
-		awful.util.spawn("ossvol -i 4")
-	elseif mode == "down" then
-		awful.util.spawn("ossvol -d 4")
-	elseif mode == "mute" then
-		awful.util.spawn("ossvol -t")
+    if mode == "up" then
+        awful.util.spawn("ossvol -i 4")
+    elseif mode == "down" then
+        awful.util.spawn("ossvol -d 4")
+    elseif mode == "mute" then
+        awful.util.spawn("ossvol -t")
     end
     local volume = awful.util.pread("ossvol -v")
     volume = tonumber(volume)
