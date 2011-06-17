@@ -3,8 +3,6 @@ export EDITOR="vim"
 export BROWSER="firefox"
 # poprawny obraz z kamery w skype
 #export LD_PRELOAD=/usr/lib/libv4l/v4l1compat.so
-# dla takiego samego wyglądu aplikacji qt i gtk
-#export GTK2_RC_FILES=~/.gtkrc-2.0
 # dźwięk w wesnoth
 export SDL_AUDIODRIVER="dma"
 export AUDIO_DEV="/dev/dsp"
@@ -112,10 +110,6 @@ extract () {
    else
        echo "'$1' is not a valid file!"
    fi
-}
-
-rapid() {
-    rapidget -l "/home/lukasz/tmp/rs/${1}/list" -p "/home/lukasz/tmp/rs/${1}"
 }
 
 
