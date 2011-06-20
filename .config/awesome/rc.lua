@@ -43,7 +43,6 @@ layouts =
 
 -- Autorun programs
 autorun = true
-
 autorun_apps = 
 {
     "kadu",
@@ -353,6 +352,19 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "i",     function () awful.util.spawn("firefox")   end),
     awful.key({ modkey,           }, "a",     function () awful.util.spawn("anki")      end),
     awful.key({ modkey,           }, "c",     function () awful.util.spawn(terminal .. " -e ncmpcpp") end),
+    awful.key({ modkey, "Control" }, "c",     function ()
+                                                  awful.prompt.run({ prompt = "Calculate: " },
+                                                  mypromptbox[mouse.screen].widget,
+                                                  function (expr)
+                                                      local msg = awful.util.pread("python -c \"from math import *;print(" .. expr .. ")\"")
+                                                      msg = msg:gsub("\n", "")
+                                                      naughty.notify({
+                                                          text = msg,
+                                                          timeout = 7,
+                                                          position = "top_left"
+                                                      })
+                                                  end)
+                                              end),
     -- extra keyboard keys
     awful.key({ }, "XF86AudioRaiseVolume",    function () volume("up")                  end),
     awful.key({ }, "XF86AudioLowerVolume",    function () volume("down")                end),
@@ -361,7 +373,7 @@ globalkeys = awful.util.table.join(
     awful.key({ }, "XF86AudioPrev",           function () awful.util.spawn("mpc prev")  end),
     awful.key({ }, "XF86AudioPlay",           function ()
                                                   local s = awful.util.pread("mpc")
-                                                  if string.find(s, "%[playing%]") then
+                                                  if s:find("%[playing%]") then
                                                       awful.util.spawn("mpc pause")
                                                   else
                                                       awful.util.spawn("mpc play")
@@ -448,8 +460,7 @@ awful.rules.rules = {
                      border_color = beautiful.border_normal,
                      focus = true,
                      keys = clientkeys,
-                     buttons = clientbuttons,
-                     size_hints_honor = false } },
+                     buttons = clientbuttons } },
     { rule = { class = "Gimp" },
       properties = { floating = true },
       callback = awful.titlebar.add },
@@ -521,7 +532,7 @@ mpd()
 rss()
 -- }}}
 
--- {{{ Run apps in table autorun_apps
+-- {{{ Run apps from autorun_apps
 if autorun then
    for i, app in ipairs(autorun_apps) do
        awful.util.spawn(app)
