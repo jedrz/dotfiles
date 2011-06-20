@@ -248,7 +248,7 @@ for s = 1, screen.count() do
             mylauncher,
             mytaglist[s],
             mylayoutbox[s],
-            myseparator,
+            --myseparator,
             mypromptbox[s],
             layout = awful.widget.layout.horizontal.leftright
         },

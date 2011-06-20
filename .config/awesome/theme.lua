@@ -87,6 +87,7 @@ theme.titlebar_maximized_button_focus_active = "/usr/share/awesome/themes/defaul
 theme.wallpaper_cmd = { "feh --bg-scale /home/lukasz/Obrazy/16-9/wallpaper-613306.jpg" }
 
 -- You can use your own layout icons like this:
+--[[
 theme.layout_fairh = "/usr/share/awesome/themes/zenburn/layouts/fairh.png"
 theme.layout_fairv = "/usr/share/awesome/themes/zenburn/layouts/fairv.png"
 theme.layout_floating = "/usr/share/awesome/themes/zenburn/layouts/floating.png"
@@ -97,6 +98,19 @@ theme.layout_tilebottom = "/usr/share/awesome/themes/zenburn/layouts/tilebottom.
 theme.layout_tileleft = "/usr/share/awesome/themes/zenburn/layouts/tileleft.png"
 theme.layout_tile = "/usr/share/awesome/themes/zenburn/layouts/tile.png"
 theme.layout_tiletop = "/usr/share/awesome/themes/zenburn/layouts/tiletop.png"
+--]]
+theme.layout_fairh = "/home/lukasz/.config/awesome/layouts/fairh.png"
+theme.layout_fairv = "/home/lukasz/.config/awesome/layouts/fairv.png"
+theme.layout_floating  = "/home/lukasz/.config/awesome/layouts/floating.png"
+theme.layout_magnifier = "/home/lukasz/.config/awesome/layouts/magnifier.png"
+theme.layout_max = "/home/lukasz/.config/awesome/layouts/max.png"
+theme.layout_fullscreen = "/home/lukasz/.config/awesome/layouts/fullscreen.png"
+theme.layout_tilebottom = "/home/lukasz/.config/awesome/layouts/tilebottom.png"
+theme.layout_tileleft   = "/home/lukasz/.config/awesome/layouts/tileleft.png"
+theme.layout_tile = "/home/lukasz/.config/awesome/layouts/tile.png"
+theme.layout_tiletop = "/home/lukasz/.config/awesome/layouts/tiletop.png"
+theme.layout_spiral  = "/home/lukasz/.config/awesome/layouts/spiral.png"
+theme.layout_dwindle = "/home/lukasz/.config/awesome/layouts/dwindle.png"
 
 theme.awesome_icon = "/usr/share/awesome/icons/awesome16.png"
 
