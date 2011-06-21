@@ -84,17 +84,8 @@ function volume (mode)
     volwidget.text = volume
 end
 
-function rss ()
-    rsswidget.text = " " .. awful.util.pread("/home/lukasz/Skrypty/conkyGoogleReader.sh")
-end
-
 function mpd ()
     mpdwidget.text = " " .. awful.util.pread("/home/lukasz/Skrypty/mpd-notify.sh")
-end
-
-function quit ()
-    awful.util.spawn("killall mpd mpdscribble")
-    awesome.quit()
 end
 -- }}}
 
@@ -113,7 +104,7 @@ end
 mymainmenu = awful.menu({ items = { { "edit config", editor_cmd .. " " .. awful.util.getdir("config") .. "/rc.lua" },
                                     { "res network", "sudo rc.d restart network" },
                                     { "restart", awesome.restart },
-                                    { "quit", quit },
+                                    { "quit", awesome.quit },
                                     { "reboot", "sudo reboot" },
                                     { "poweroff", "sudo poweroff" } }
                         })
@@ -155,16 +146,6 @@ volwidget:buttons(awful.util.table.join(
 ))
 volicon = widget({ type = "imagebox" })
 volicon.image = image(beautiful.vol_icon)
-
-rsswidget = widget({ type = "textbox" })
-rsswidget:buttons(awful.util.table.join(
-    awful.button({ }, 1, function () 
-        awful.util.spawn("firefox reader.google.pl")
-    end),
-    awful.button({ }, 3, rss)
-))
-rssicon = widget({ type = "imagebox" })
-rssicon.image = image(beautiful.rss_icon)
 
 mpdwidget = widget({ type = "textbox" })
 mpdwidget:buttons(awful.util.table.join(
@@ -266,9 +247,6 @@ for s = 1, screen.count() do
         mailwidget,
         mailicon,
         myseparator,
-        rsswidget,
-        rssicon,
-        myseparator,
         mpdwidget,
         mpdicon,
         myseparator,
@@ -321,8 +299,7 @@ globalkeys = awful.util.table.join(
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
-    --awful.key({ modkey, "Shift"   }, "q", awesome.quit),
-    awful.key({ modkey, "Shift"   }, "q", quit),
+    awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)    end),
@@ -348,7 +325,7 @@ globalkeys = awful.util.table.join(
 
     -- my keybindigs
     awful.key({ modkey, "Shift"   }, "Delete", function () awful.util.spawn("sudo poweroff") end),
-    awful.key({ modkey,           }, "p",     function () awful.util.spawn("pcmanfm")    end),
+    awful.key({ modkey,           }, "p",     function () awful.util.spawn("pcmanfm")   end),
     awful.key({ modkey,           }, "i",     function () awful.util.spawn("firefox")   end),
     awful.key({ modkey,           }, "a",     function () awful.util.spawn("anki")      end),
     awful.key({ modkey,           }, "c",     function () awful.util.spawn(terminal .. " -e ncmpcpp") end),
@@ -516,11 +493,6 @@ weathertimer:start()
 mpdtimer = timer { timeout = 37 }
 mpdtimer:add_signal("timeout", mpd)
 mpdtimer:start()
-
--- rss
-rsstimer = timer { timeout = 3863 }
-rsstimer:add_signal("timeout", rss)
-rsstimer:start()
 -- }}}
 
 -- {{{ Run functions
@@ -529,7 +501,6 @@ mail()
 weather()
 volume("update")
 mpd()
-rss()
 -- }}}
 
 -- {{{ Run apps from autorun_apps

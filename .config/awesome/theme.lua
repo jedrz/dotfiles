@@ -84,7 +84,7 @@ theme.titlebar_maximized_button_normal_active = "/usr/share/awesome/themes/defau
 theme.titlebar_maximized_button_focus_active = "/usr/share/awesome/themes/default/titlebar/maximized_focus_active.png"
 
 -- You can use your own command to set your wallpaper
-theme.wallpaper_cmd = { "feh --bg-scale /home/lukasz/Obrazy/16-9/wallpaper-613306.jpg" }
+theme.wallpaper_cmd = { "feh --bg-scale /home/lukasz/Obrazy/16-9/lined.jpg" }
 
 -- You can use your own layout icons like this:
 --[[
@@ -116,7 +116,6 @@ theme.awesome_icon = "/usr/share/awesome/icons/awesome16.png"
 
 -- widgets' icons
 theme.mpd_icon = "/home/lukasz/.config/awesome/icons/music.png"
-theme.rss_icon = "/home/lukasz/.config/awesome/icons/rss.png"
 theme.mail_icon = "/home/lukasz/.config/awesome/icons/mail.png"
 theme.weather_icon = "/home/lukasz/.config/awesome/icons/temp.png"
 theme.date_icon = "/home/lukasz/.config/awesome/icons/time.png"
