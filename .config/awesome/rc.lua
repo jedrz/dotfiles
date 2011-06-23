@@ -74,23 +74,23 @@ function volume (mode)
     local channel = "Master"
     if mode == "update" then
         local status = awful.util.pread("amixer -c " .. cardid .. " -- sget " .. channel)
- 		local volume = string.match(status, "(%d?%d?%d)%%")
- 		volume = string.format("% 3d", volume)
- 		status = string.match(status, "%[(o[^%]]*)%]")
- 		if string.find(status, "on", 1, true) then
- 			volume = volume .. "%"
- 		else
- 			volume = volume .. "M"
- 		end
- 		volwidget.text = volume
- 	elseif mode == "up" then
+        local volume = string.match(status, "(%d?%d?%d)%%")
+        volume = string.format("% 3d", volume)
+        status = string.match(status, "%[(o[^%]]*)%]")
+        if string.find(status, "on", 1, true) then
+            volume = volume .. "%"
+        else
+            volume = volume .. "M"
+        end
+        volwidget.text = volume
+    elseif mode == "up" then
         awful.util.spawn_with_shell("amixer -q -c " .. cardid .. " sset " .. channel .. " 5%+")
- 		volume("update")
- 	elseif mode == "down" then
+        volume("update")
+    elseif mode == "down" then
         awful.util.spawn_with_shell("amixer -q -c " .. cardid .. " sset " .. channel .. " 5%-")
- 		volume("update")
- 	else
- 		awful.util.spawn_with_shell("amixer -c " .. cardid .. " sset " .. channel .. " toggle")
+        volume("update")
+    else
+        awful.util.spawn_with_shell("amixer -c " .. cardid .. " sset " .. channel .. " toggle")
         volume("update")
     end
 end
