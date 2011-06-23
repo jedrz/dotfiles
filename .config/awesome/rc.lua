@@ -28,7 +28,7 @@ modkey = "Mod4"
 layouts =
 {
     awful.layout.suit.tile,
-    awful.layout.suit.tile.left,
+    --awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
     awful.layout.suit.tile.top,
     awful.layout.suit.fair,
@@ -65,27 +65,34 @@ function date ()
     datewidget.text = " " .. awful.util.pread("date +'%a, %d %b %Y, %H:%M'")
 end
 
-function volume (mode)
-    if mode == "up" then
-        awful.util.spawn("ossvol -i 4")
-    elseif mode == "down" then
-        awful.util.spawn("ossvol -d 4")
-    elseif mode == "mute" then
-        awful.util.spawn("ossvol -t")
-    end
-    local volume = awful.util.pread("ossvol -v")
-    volume = tonumber(volume)
-	if volume == 0 then
-        volume = " MUTE"
-    else
-        volume = volume * 4
-        volume = " " .. volume .. "%"
-    end
-    volwidget.text = volume
-end
-
 function mpd ()
     mpdwidget.text = " " .. awful.util.pread("/home/lukasz/Skrypty/mpd-notify.sh")
+end
+
+function volume (mode)
+    local cardid = 0
+    local channel = "Master"
+    if mode == "update" then
+        local status = awful.util.pread("amixer -c " .. cardid .. " -- sget " .. channel)
+ 		local volume = string.match(status, "(%d?%d?%d)%%")
+ 		volume = string.format("% 3d", volume)
+ 		status = string.match(status, "%[(o[^%]]*)%]")
+ 		if string.find(status, "on", 1, true) then
+ 			volume = volume .. "%"
+ 		else
+ 			volume = volume .. "M"
+ 		end
+ 		volwidget.text = volume
+ 	elseif mode == "up" then
+        awful.util.spawn_with_shell("amixer -q -c " .. cardid .. " sset " .. channel .. " 5%+")
+ 		volume("update")
+ 	elseif mode == "down" then
+        awful.util.spawn_with_shell("amixer -q -c " .. cardid .. " sset " .. channel .. " 5%-")
+ 		volume("update")
+ 	else
+ 		awful.util.spawn_with_shell("amixer -c " .. cardid .. " sset " .. channel .. " toggle")
+        volume("update")
+    end
 end
 -- }}}
 
@@ -324,7 +331,7 @@ globalkeys = awful.util.table.join(
               end),
 
     -- my keybindigs
-    awful.key({ modkey, "Shift"   }, "Delete", function () awful.util.spawn("sudo poweroff") end),
+    awful.key({ modkey, "Shift"   }, "Delete", function () awful.util.spawn_with_shell("sudo poweroff") end),
     awful.key({ modkey,           }, "p",     function () awful.util.spawn("pcmanfm")   end),
     awful.key({ modkey,           }, "i",     function () awful.util.spawn("firefox")   end),
     awful.key({ modkey,           }, "a",     function () awful.util.spawn("anki")      end),
@@ -346,17 +353,17 @@ globalkeys = awful.util.table.join(
     awful.key({ }, "XF86AudioRaiseVolume",    function () volume("up")                  end),
     awful.key({ }, "XF86AudioLowerVolume",    function () volume("down")                end),
     awful.key({ }, "XF86AudioMute",           function () volume("mute")                end),
-    awful.key({ }, "XF86AudioNext",           function () awful.util.spawn("mpc next")  end),
-    awful.key({ }, "XF86AudioPrev",           function () awful.util.spawn("mpc prev")  end),
+    awful.key({ }, "XF86AudioNext",           function () awful.util.spawn_with_shell("mpc next") end),
+    awful.key({ }, "XF86AudioPrev",           function () awful.util.spawn_with_shell("mpc prev") end),
     awful.key({ }, "XF86AudioPlay",           function ()
                                                   local s = awful.util.pread("mpc")
                                                   if s:find("%[playing%]") then
-                                                      awful.util.spawn("mpc pause")
+                                                      awful.util.spawn_with_shell("mpc pause")
                                                   else
-                                                      awful.util.spawn("mpc play")
+                                                      awful.util.spawn_with_shell("mpc play")
                                                   end
                                               end),
-    awful.key({ }, "XF86AudioStop",           function () awful.util.spawn("mpc stop")  end)
+    awful.key({ }, "XF86AudioStop",           function () awful.util.spawn_with_shell("mpc stop") end)
 )
 
 clientkeys = awful.util.table.join(
@@ -476,6 +483,9 @@ end)
 
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+
+-- to kill some apps during exit
+awesome.add_signal("exit", function () awful.util.spawn_with_shell("killall mpdscribble") end)
 -- }}}
 
 -- {{{ Timers

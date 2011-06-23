@@ -99,6 +99,7 @@ theme.layout_tileleft = "/usr/share/awesome/themes/zenburn/layouts/tileleft.png"
 theme.layout_tile = "/usr/share/awesome/themes/zenburn/layouts/tile.png"
 theme.layout_tiletop = "/usr/share/awesome/themes/zenburn/layouts/tiletop.png"
 --]]
+
 theme.layout_fairh = "/home/lukasz/.config/awesome/layouts/fairh.png"
 theme.layout_fairv = "/home/lukasz/.config/awesome/layouts/fairv.png"
 theme.layout_floating  = "/home/lukasz/.config/awesome/layouts/floating.png"
