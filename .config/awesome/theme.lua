@@ -6,7 +6,7 @@ theme = {}
  
 theme.font = "clean 9"
 
---[[ old colors
+--[[ more old colors
 theme.bg_normal = "#131313"
 theme.bg_focus = "#131313"
 theme.bg_urgent = "#131313"
@@ -23,6 +23,7 @@ theme.border_marked = "#CD2121"
 theme.bg_widget = "#131313"
 --]]
 
+--[[ less old colors
 theme.bg_normal     = "#222222"
 theme.bg_focus      = "#535d6c"
 theme.bg_urgent     = "#ff0000"
@@ -33,10 +34,26 @@ theme.fg_focus      = "#ffffff"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
-theme.border_width  = "1"
+theme.border_width  = "3"
 theme.border_normal = "#000000"
 theme.border_focus  = "#535d6c"
 theme.border_marked = "#91231c"
+--]]
+
+theme.bg_normal     = "#222222"
+theme.bg_focus      = "#4c4c4c"
+theme.bg_urgent     = "#d23d3d"
+theme.bg_minimize   = "#444444"
+
+theme.fg_normal     = "#aaaaaa"
+theme.fg_focus      = "#ffffff"
+theme.fg_urgent     = "#ffffff"
+theme.fg_minimize   = "#ffffff"
+
+theme.border_width  = "3"
+theme.border_normal = "#303030"
+theme.border_focus  = "#e84f4f"
+theme.border_marked = "#ffffff"
 
 -- There are another variables sets
 -- overriding the default one when
@@ -113,7 +130,7 @@ theme.layout_tiletop = "/home/lukasz/.config/awesome/layouts/tiletop.png"
 theme.layout_spiral  = "/home/lukasz/.config/awesome/layouts/spiral.png"
 theme.layout_dwindle = "/home/lukasz/.config/awesome/layouts/dwindle.png"
 
-theme.awesome_icon = "/usr/share/awesome/icons/awesome16.png"
+theme.awesome_icon = "/home/lukasz/.config/awesome/icons/awesome16.png"
 
 -- widgets' icons
 theme.mpd_icon = "/home/lukasz/.config/awesome/icons/music.png"
