@@ -102,7 +102,7 @@ tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
     --tags[s] = awful.tag({ 1, 2, 3, 4, 5 }, s, layouts[1])
-    tags[s] = awful.tag({ "⌘", "⌥", "✇", "⌤", "☭" }, s, layouts[1])
+    tags[s] = awful.tag({ "⌘", "⌥", "♐", "⌤", "♓" }, s, layouts[1])
 end
 -- }}}
 
@@ -444,7 +444,8 @@ awful.rules.rules = {
                      border_color = beautiful.border_normal,
                      focus = true,
                      keys = clientkeys,
-                     buttons = clientbuttons } },
+                     buttons = clientbuttons,
+                     size_hints_honor = false } },
     { rule = { class = "Gimp" },
       properties = { floating = true },
       callback = awful.titlebar.add },

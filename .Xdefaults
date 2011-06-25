@@ -28,8 +28,8 @@ urxvt.urlLauncher:      /usr/bin/firefox
 urxvt.matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]           
 
 *foreground:              #a0a0a0
-*background:              #1B1D1E
-!*background:              #121212
+!*background:              #1B1D1E
+*background:              #222222
 !black
 *color0:                  #1B1D1E
 *color8:                  #505354
