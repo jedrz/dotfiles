@@ -19,7 +19,7 @@ urxvt.geometry:         90×30
 urxvt.xftAntialias:     true
 urxvt.jumpScroll:       true
 urxvt.internalBorder:   1
-urxvt.cursorBlink:      false           
+urxvt.cursorBlink:      false
 
 !–< urxvt:url >–!
 urxvt.perl-ext-common:  default,matcher
