@@ -28,7 +28,7 @@ modkey = "Mod4"
 layouts =
 {
     awful.layout.suit.tile,
-    --awful.layout.suit.tile.left,
+    awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
     awful.layout.suit.tile.top,
     awful.layout.suit.fair,
@@ -53,10 +53,6 @@ autorun_apps =
 -- }}}
 
 -- {{{ Functions
-function mail ()
-    mailwidget.text = " " .. awful.util.pread("/home/lukasz/Skrypty/check_gmail.sh")
-end
-
 function weather ()
     weatherwidget.text = " " .. awful.util.pread("python2 /home/lukasz/Skrypty/weather.py")
 end
@@ -127,16 +123,6 @@ myseparator.text = " | "
 datewidget = widget({ type = "textbox" })
 dateicon = widget({ type = "imagebox" })
 dateicon.image = image(beautiful.date_icon)
-
-mailwidget = widget({ type = "textbox" })
-mailwidget:buttons(awful.util.table.join(
-    awful.button({ }, 1, function ()
-        awful.util.spawn("firefox gmail.com")
-    end),
-    awful.button({ }, 3, mail)
-))
-mailicon = widget({ type = "imagebox" })
-mailicon.image = image(beautiful.mail_icon)
 
 weatherwidget = widget({ type = "textbox" })
 weatherwidget:buttons(awful.util.table.join(
@@ -250,9 +236,6 @@ for s = 1, screen.count() do
         myseparator,
         weatherwidget,
         weathericon,
-        myseparator,
-        mailwidget,
-        mailicon,
         myseparator,
         mpdwidget,
         mpdicon,
@@ -508,7 +491,6 @@ mpdtimer:start()
 
 -- {{{ Run functions
 date()
-mail()
 weather()
 volume("update")
 mpd()
