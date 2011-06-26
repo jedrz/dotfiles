@@ -68,13 +68,6 @@ PROMPT="${BLUE}┌─[${PINK}%n@%m${BLUE}]─[${RED}%~${BLUE}]
 
 
 # zsh-mime-setup
-zstyle ':mime:.cpp:' handler gvim %s
-zstyle ':mime:.cpp:' flags needsterminal
-zstyle ':mime:.c:' handler gvim %s
-zstyle ':mime:.c:' flags needsterminal
-zstyle ':mime:.py:' handler gvim %s
-zstyle ':mime:.py:' flags needsterminal
-
 autoload -U zsh-mime-setup
 zsh-mime-setup
 
@@ -84,8 +77,6 @@ alias ..='cd ..'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 #alias pyaur='python2 ~/Programowanie/python/skrypty/pyaur/pyaur.py'
-#alias awesome-test1='Xephyr -ac -br -noreset -screen 1152x720 :1 &'
-#alias awesome-test2='DISPLAY=:1.0 awesome -c ~/.config/awesome/rc.lua.new'
 alias wrar='wine ~/.wine/drive_c/Program\ Files/WinRAR/WinRAR.exe'
 alias gcc='gcc -Wall'
 alias g++='g++ -Wall'
