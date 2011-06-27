@@ -1,56 +1,56 @@
 !czcionki
-Xft.antialias:   true
-Xft.hinting:     true
-Xft.hintstyle:   hintslight
-!Xft.hintstyle:   hintmedium
-!Xft.hintstyle:   hintfull
-Xft.dpi:         96
-Xft.rgba:        rgb
-Xft.lcdfilter: lcddefault
-Xcursor.theme: default
+Xft.antialias           : true
+Xft.hinting             : true
+Xft.hintstyle           : hintslight
+!Xft.hintstyle          : hintmedium
+!Xft.hintstyle          : hintfull
+Xft.dpi                 : 96
+Xft.rgba                : rgb
+Xft.lcdfilter           : lcddefault
+Xcursor.theme           : default
 
 !–< urxvt >–!
-urxvt.font:             xft:terminus:size=9
-urxvt.termName:         rxvt
-urxvt.scrollBar:        false
-urxvt.imLocale:         pl_PL.utf-8
-urxvt.saveLines:        1024
-urxvt.geometry:         90×30
-urxvt.xftAntialias:     true
-urxvt.jumpScroll:       true
-urxvt.internalBorder:   1
-urxvt.cursorBlink:      false
+urxvt.font              : xft:terminus:size=9
+urxvt.termName          : rxvt
+urxvt.scrollBar         : false
+urxvt.imLocale          : pl_PL.utf-8
+urxvt.saveLines         : 1024
+urxvt.geometry          : 90×30
+urxvt.xftAntialias      : true
+urxvt.jumpScroll        : true
+urxvt.internalBorder    : 1
+urxvt.cursorBlink       : false
 
-!–< urxvt:url >–!
-urxvt.perl-ext-common:  default,matcher
-urxvt.matcher.button:   1
-urxvt.urlLauncher:      /usr/bin/firefox
-urxvt.matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]           
+!urxvt url
+urxvt.perl-ext-common   : default,matcher
+urxvt.matcher.button    : 1
+urxvt.urlLauncher       : /usr/bin/firefox
+urxvt.matcher.pattern.1 : \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 
-*foreground:              #a0a0a0
-!*background:              #1B1D1E
-*background:              #222222
+*foreground             : #a0a0a0
+!*background            : #1B1D1E
+*background             : #222222
 !black
-*color0:                  #1B1D1E
-*color8:                  #505354
+*color0                 : #1B1D1E
+*color8                 : #505354
 !red
-*color1:                  #F92672
-*color9:                  #FF5995
+*color1                 : #F92672
+*color9                 : #FF5995
 !green
-*color2:                  #82B414
-*color10:                 #B6E354
+*color2                 : #82B414
+*color10                : #B6E354
 !yellow
-*color3:                  #FD971F
-*color11:                 #FEED6C
+*color3                 : #FD971F
+*color11                : #FEED6C
 !blue
-*color4:                  #4E82AA
-*color12:                 #0C73C2
+*color4                 : #4E82AA
+*color12                : #0C73C2
 !magenta
-*color5:                  #8C54FE
-*color13:                 #9E6FFE
+*color5                 : #8C54FE
+*color13                : #9E6FFE
 !cyan
-*color6:                  #465457
-*color14:                 #899CA1
+*color6                 : #465457
+*color14                : #899CA1
 !white
-*color7:                  #CCCCC6
-*color15:                 #F8F8F2
+*color7                 : #CCCCC6
+*color15                : #F8F8F2
