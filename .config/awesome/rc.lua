@@ -53,42 +53,86 @@ autorun_apps =
 -- }}}
 
 -- {{{ Functions
-function weather ()
+function weather()
     weatherwidget.text = " " .. awful.util.pread("python2 /home/lukasz/Skrypty/weather.py")
 end
 
-function date ()
+function date()
     datewidget.text = " " .. awful.util.pread("date +'%a, %d %b %Y, %H:%M'")
 end
 
-function mpd ()
+function mpd()
     mpdwidget.text = " " .. awful.util.pread("/home/lukasz/Skrypty/mpd-notify.sh")
 end
 
-function volume (mode)
-    local cardid = 0
-    local channel = "Master"
-    if mode == "update" then
-        local status = awful.util.pread("amixer -c " .. cardid .. " -- sget " .. channel)
-        local volume = string.match(status, "(%d?%d?%d)%%")
-        volume = string.format("% 3d", volume)
-        status = string.match(status, "%[(o[^%]]*)%]")
-        if string.find(status, "on", 1, true) then
-            volume = volume .. "%"
-        else
-            volume = volume .. "M"
-        end
-        volwidget.text = volume
-    elseif mode == "up" then
-        awful.util.spawn_with_shell("amixer -q -c " .. cardid .. " sset " .. channel .. " 5%+")
-        volume("update")
-    elseif mode == "down" then
-        awful.util.spawn_with_shell("amixer -q -c " .. cardid .. " sset " .. channel .. " 5%-")
-        volume("update")
+function volume_get_icon()
+    local status = awful.util.pread("amixer get Master")
+    local volume = status:match("%[(%d+)%%%]")
+    local volume = tonumber(volume)
+    local is_muted = status:find("%[off%]")
+
+    if is_muted then
+        return beautiful.vol_muted_icon
+    elseif volume > 70 then
+        return beautiful.vol_high_icon
+    elseif volume > 30 then
+        return beautiful.vol_medium_icon
+    elseif volume > 0 then
+        return beautiful.vol_low_icon
     else
-        awful.util.spawn_with_shell("amixer -c " .. cardid .. " sset " .. channel .. " toggle")
-        volume("update")
+        return beautiful.vol_off_icon
     end
+end
+
+local fg_bar = "#34bdef"
+local volume_notification = nil
+local volume_img = image.argb32(200, 50, nil)
+
+function volume_notify(volume)
+    local img = volume_img
+    img:draw_rectangle(0, 0, img.width, img.height, true, beautiful.bg_normal)
+    local vol_icon = image(volume_get_icon())
+    img:insert(vol_icon, 0, 1)
+    img:draw_rectangle(60, 20, 130, 10, true, beautiful.bg_normal)
+    img:draw_rectangle(62, 22, 126 * volume / 100, 6, true, fg_bar)
+
+    local id = nil
+    if volume_notification then
+        id = volume_notification.id
+    end
+    volume_notification = naughty.notify({
+        icon = img,
+        replaces_id = id,
+        text = "\n" .. string.format("%3d", volume) .. "%",
+        font = "DejaVu Sans 10"
+    })
+end
+
+function volume_adjust(inc)
+    if inc > 0 then
+        inc = inc .. "%+"
+    elseif inc < 0 then
+        inc = -inc .. "%-"
+    else
+        inc = "toggle"
+    end
+    awful.util.spawn_with_shell("amixer set Master " .. inc)
+    local status = awful.util.pread("amixer get Master")
+    local volume = status:match("%[(%d+)%%%]")
+    local volume = tonumber(volume)
+    volume_notify(volume)
+end
+
+function volume_up()
+    volume_adjust(5)
+end
+
+function volume_down()
+    volume_adjust(-5)
+end
+
+function volume_mute()
+    volume_adjust(0)
 end
 -- }}}
 
@@ -97,7 +141,6 @@ end
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    --tags[s] = awful.tag({ 1, 2, 3, 4, 5 }, s, layouts[1])
     tags[s] = awful.tag({ "⌘", "⌥", "♐", "⌤", "♓" }, s, layouts[1])
 end
 -- }}}
@@ -130,15 +173,6 @@ weatherwidget:buttons(awful.util.table.join(
 ))
 weathericon = widget({ type = "imagebox" })
 weathericon.image = image(beautiful.weather_icon)
-
-volwidget = widget({ type = "textbox" })
-volwidget:buttons(awful.util.table.join(
-    awful.button({ }, 4, function () volume("up") end),
-    awful.button({ }, 5, function () volume("down") end),
-    awful.button({ }, 1, function () volume("mute") end)
-))
-volicon = widget({ type = "imagebox" })
-volicon.image = image(beautiful.vol_icon)
 
 mpdwidget = widget({ type = "textbox" })
 mpdwidget:buttons(awful.util.table.join(
@@ -230,9 +264,6 @@ for s = 1, screen.count() do
         myseparator,
         datewidget,
         dateicon,
-        myseparator,
-        volwidget,
-        volicon,
         myseparator,
         weatherwidget,
         weathericon,
@@ -333,9 +364,9 @@ globalkeys = awful.util.table.join(
                                                   end)
                                               end),
     -- extra keyboard keys
-    awful.key({ }, "XF86AudioRaiseVolume",    function () volume("up")                  end),
-    awful.key({ }, "XF86AudioLowerVolume",    function () volume("down")                end),
-    awful.key({ }, "XF86AudioMute",           function () volume("mute")                end),
+    awful.key({ }, "XF86AudioRaiseVolume",    volume_up                                    ),
+    awful.key({ }, "XF86AudioLowerVolume",    volume_down                                  ),
+    awful.key({ }, "XF86AudioMute",           volume_mute                                  ),
     awful.key({ }, "XF86AudioNext",           function () awful.util.spawn_with_shell("mpc next") end),
     awful.key({ }, "XF86AudioPrev",           function () awful.util.spawn_with_shell("mpc prev") end),
     awful.key({ }, "XF86AudioPlay",           function ()
@@ -492,7 +523,6 @@ mpdtimer:start()
 -- {{{ Run functions
 date()
 weather()
-volume("update")
 mpd()
 -- }}}
 

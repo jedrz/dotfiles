@@ -132,10 +132,15 @@ theme.layout_dwindle = "/home/lukasz/.config/awesome/layouts/dwindle.png"
 
 theme.awesome_icon = "/home/lukasz/.config/awesome/icons/awesome16.png"
 
--- widgets' icons
+-- custom icons
 theme.mpd_icon = "/home/lukasz/.config/awesome/icons/music.png"
 theme.weather_icon = "/home/lukasz/.config/awesome/icons/temp.png"
 theme.date_icon = "/home/lukasz/.config/awesome/icons/time.png"
 theme.vol_icon = "/home/lukasz/.config/awesome/icons/vol.png"
+theme.vol_high_icon = "/home/lukasz/.config/awesome/icons/volume-high.png"
+theme.vol_medium_icon = "/home/lukasz/.config/awesome/icons/volume-medium.png"
+theme.vol_low_icon = "/home/lukasz/.config/awesome/icons/volume-low.png"
+theme.vol_off_icon = "/home/lukasz/.config/awesome/icons/volume-off.png"
+theme.vol_muted_icon = "/home/lukasz/.config/awesome/icons/volume-muted.png"
 
 return theme
