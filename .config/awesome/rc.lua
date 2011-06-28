@@ -92,7 +92,6 @@ function volume_notify(volume)
     img:draw_rectangle(0, 0, img.width, img.height, true, beautiful.bg_normal)
     local vol_icon = image(volume_get_icon())
     img:insert(vol_icon, 0, 1)
-    img:draw_rectangle(60, 20, 130, 10, true, beautiful.bg_normal)
     img:draw_rectangle(62, 22, 126 * volume / 100, 6, true, beautiful.fg_normal)
 
     local id = nil
