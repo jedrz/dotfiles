@@ -84,7 +84,6 @@ function volume_get_icon()
     end
 end
 
-local fg_bar = "#34bdef"
 local volume_notification = nil
 local volume_img = image.argb32(200, 50, nil)
 
@@ -94,7 +93,7 @@ function volume_notify(volume)
     local vol_icon = image(volume_get_icon())
     img:insert(vol_icon, 0, 1)
     img:draw_rectangle(60, 20, 130, 10, true, beautiful.bg_normal)
-    img:draw_rectangle(62, 22, 126 * volume / 100, 6, true, fg_bar)
+    img:draw_rectangle(62, 22, 126 * volume / 100, 6, true, beautiful.fg_normal)
 
     local id = nil
     if volume_notification then
