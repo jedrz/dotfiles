@@ -10,7 +10,7 @@ Xft.lcdfilter           : lcddefault
 Xcursor.theme           : default
 
 !–< urxvt >–!
-urxvt.font              : xft:terminus:size=9
+urxvt.font              : xft:Envy Code R:size=9
 urxvt.termName          : rxvt
 urxvt.scrollBar         : false
 urxvt.imLocale          : pl_PL.utf-8
@@ -53,4 +53,4 @@ urxvt.matcher.pattern.1 : \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 *color14                : #899CA1
 !white
 *color7                 : #CCCCC6
-*color15                : #F8F8F2
+color15                : #F8F8F2
