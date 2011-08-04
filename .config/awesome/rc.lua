@@ -466,6 +466,9 @@ awful.rules.rules = {
       callback = awful.titlebar.add },
     { rule = { class = "Skype" },
       properties = { floating = true },
+      callback = awful.titlebar.add },
+    { rule = { name = "Vim Viewer" },
+      properties = { floating = true },
       callback = awful.titlebar.add }
 }
 -- }}}

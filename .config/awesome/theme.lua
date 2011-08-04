@@ -4,7 +4,7 @@
 
 theme = {}
  
-theme.font = "clean 9"
+theme.font = "terminus 9"
 
 --[[ more old colors
 theme.bg_normal = "#131313"
