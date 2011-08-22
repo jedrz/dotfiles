@@ -4,16 +4,16 @@ if has("gui_running")
     set guioptions-=L
     set guioptions-=T
     set guioptions-=m
-    "set guifont=Monaco\ 9
-    set guifont=Envy\ Code\ R
+    set guifont=Monaco\ 9
+    "set guifont=Terminus\ 9
     set mousehide
-    colorscheme molokai
+    "colorscheme molokai
+    colorscheme kellys
 else
     " vim
     set t_Co=256
     colorscheme delek
     " set background=dark
-    " syntax enable
 endif
 
 set nocompatible

@@ -1,12 +1,10 @@
-# zmienne
 export EDITOR="vim"
-export BROWSER="firefox"
-# poprawny obraz z kamery w skype
+# skype camera
 #export LD_PRELOAD=/usr/lib/libv4l/v4l1compat.so
-# dźwięk w wesnoth
-export SDL_AUDIODRIVER="dma"
+# dosbox
+export SDL_AUDIODRIVER=alsa
 export AUDIO_DEV="/dev/dsp"
-# normalne okna javy
+# java fix for awesome wm
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 

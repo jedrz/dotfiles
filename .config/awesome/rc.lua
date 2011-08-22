@@ -345,7 +345,7 @@ globalkeys = awful.util.table.join(
     -- my keybindigs
     awful.key({ modkey, "Shift"   }, "Delete", function () awful.util.spawn_with_shell("sudo poweroff") end),
     awful.key({ modkey,           }, "p",     function () awful.util.spawn("pcmanfm")   end),
-    awful.key({ modkey,           }, "i",     function () awful.util.spawn("firefox")   end),
+    awful.key({ modkey,           }, "i",     function () awful.util.spawn("luakit")   end),
     awful.key({ modkey,           }, "a",     function () awful.util.spawn("anki")      end),
     awful.key({ modkey,           }, "c",     function () awful.util.spawn(terminal .. " -e ncmpcpp") end),
     awful.key({ modkey, "Control" }, "c",     function ()
@@ -466,9 +466,6 @@ awful.rules.rules = {
       callback = awful.titlebar.add },
     { rule = { class = "Skype" },
       properties = { floating = true },
-      callback = awful.titlebar.add },
-    { rule = { name = "Vim Viewer" },
-      properties = { floating = true },
       callback = awful.titlebar.add }
 }
 -- }}}
@@ -529,7 +526,7 @@ mpd()
 
 -- {{{ Run apps from autorun_apps
 if autorun then
-   for i, app in ipairs(autorun_apps) do
+   for _, app in ipairs(autorun_apps) do
        awful.util.spawn(app)
    end
 end
