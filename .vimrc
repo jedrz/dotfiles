@@ -4,11 +4,11 @@ if has("gui_running")
     set guioptions-=L
     set guioptions-=T
     set guioptions-=m
-    set guifont=Monaco\ 9
+    set guifont=Monaco\ 8
     "set guifont=Terminus\ 9
     set mousehide
-    "colorscheme molokai
-    colorscheme kellys
+    colorscheme molokai
+    "colorscheme kellys
 else
     " vim
     set t_Co=256

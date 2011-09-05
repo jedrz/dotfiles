@@ -43,7 +43,7 @@ theme.border_marked = "#91231c"
 theme.bg_normal     = "#222222"
 theme.bg_focus      = "#4c4c4c"
 theme.bg_urgent     = "#d23d3d"
-theme.bg_minimize   = "#444444"
+theme.bg_minimize   = "#222222"
 
 theme.fg_normal     = "#aaaaaa"
 theme.fg_focus      = "#ffffff"
@@ -101,7 +101,7 @@ theme.titlebar_maximized_button_normal_active = "/usr/share/awesome/themes/defau
 theme.titlebar_maximized_button_focus_active = "/usr/share/awesome/themes/default/titlebar/maximized_focus_active.png"
 
 -- You can use your own command to set your wallpaper
-theme.wallpaper_cmd = { "feh --bg-scale /home/lukasz/Obrazy/wallpaper-706217.jpg" }
+theme.wallpaper_cmd = { "feh --bg-scale /home/lukasz/Obrazy/wallpaper-1282045.jpg" }
 
 -- You can use your own layout icons like this:
 --[[
@@ -141,5 +141,6 @@ theme.vol_medium_icon = "/home/lukasz/.config/awesome/icons/volume-medium.png"
 theme.vol_low_icon = "/home/lukasz/.config/awesome/icons/volume-low.png"
 theme.vol_off_icon = "/home/lukasz/.config/awesome/icons/volume-off.png"
 theme.vol_muted_icon = "/home/lukasz/.config/awesome/icons/volume-muted.png"
+theme.brightness_icon = "/home/lukasz/.config/awesome/icons/brightness.png"
 
 return theme

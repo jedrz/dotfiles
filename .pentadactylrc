@@ -1,5 +1,0 @@
-set showtabline=multitab
-set ds=g
-set go-=r
-noremap j 5j
-noremap k 5k

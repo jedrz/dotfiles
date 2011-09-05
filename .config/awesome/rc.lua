@@ -7,6 +7,8 @@ require("beautiful")
 -- Notification library
 require("naughty")
 
+require("browse")
+
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
 theme_path = awful.util.getdir("config") .. "/theme.lua"
@@ -38,7 +40,8 @@ layouts =
     awful.layout.suit.max,
     awful.layout.suit.max.fullscreen,
     awful.layout.suit.magnifier,
-    awful.layout.suit.floating
+    awful.layout.suit.floating,
+    browse
 }
 
 -- Autorun programs
@@ -67,8 +70,7 @@ end
 
 function volume_get_icon()
     local status = awful.util.pread("amixer get Master")
-    local volume = status:match("%[(%d+)%%%]")
-    local volume = tonumber(volume)
+    local volume = tonumber(status:match("%[(%d+)%%%]"))
     local is_muted = status:find("%[off%]")
 
     if is_muted then
@@ -139,7 +141,11 @@ end
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ "ℵ", "⌥", "♐", "⌤", "♓" }, s, layouts[1])
+    --tags[s] = awful.tag({ "ℵ", "⌥", "♐", "⌤", "♓" }, s, layouts[1])
+    tags[s] = awful.tag({ "www", 2, 3, 4, 5 }, s, layouts[1])
+    -- www
+    awful.layout.set(browse, tags[s][1])
+    awful.tag.setmwfact(0.65, tags[s][1])
 end
 -- }}}
 

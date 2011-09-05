@@ -24,7 +24,7 @@ urxvt.cursorBlink       : false
 !urxvt url
 urxvt.perl-ext-common   : default,matcher
 urxvt.matcher.button    : 1
-urxvt.urlLauncher       : /usr/bin/firefox
+urxvt.urlLauncher       : /usr/bin/luakit
 urxvt.matcher.pattern.1 : \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 
 *foreground             : #a0a0a0

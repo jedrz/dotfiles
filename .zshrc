@@ -1,9 +1,10 @@
 export EDITOR="vim"
+export BROWSER="luakit"
 # skype camera
 #export LD_PRELOAD=/usr/lib/libv4l/v4l1compat.so
 # dosbox
 export SDL_AUDIODRIVER=alsa
-export AUDIO_DEV="/dev/dsp"
+#export AUDIO_DEV="/dev/dsp"
 # java fix for awesome wm
 export _JAVA_AWT_WM_NONREPARENTING=1
 
@@ -101,18 +102,20 @@ extract () {
    fi
 }
 
-
 # key bindings
-bindkey "\e[1~" beginning-of-line
-bindkey "\e[4~" end-of-line
-bindkey "\e[5~" beginning-of-history
-bindkey "\e[6~" end-of-history
-bindkey "\e[3~" delete-char
-bindkey "\e[2~" quoted-insert
+bindkey "\e[1~" beginning-of-line # Home
+bindkey "\e[4~" end-of-line # End
+bindkey "\e[5~" beginning-of-history # PageUp
+bindkey "\e[6~" end-of-history # PageDown
+bindkey "\e[2~" quoted-insert # Ins
+bindkey "\e[3~" delete-char # Del
 bindkey "\e[5C" forward-word
 bindkey "\eOc" emacs-forward-word
 bindkey "\e[5D" backward-word
 bindkey "\eOd" emacs-backward-word
 bindkey "\e\e[C" forward-word
 bindkey "\e\e[D" backward-word
-bindkey "^H" backward-delete-word
+bindkey "\e[Z" reverse-menu-complete # Shift+Tab
+# for rxvt
+bindkey "\e[7~" beginning-of-line # Home
+bindkey "\e[8~" end-of-line # End
