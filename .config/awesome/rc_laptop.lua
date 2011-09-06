@@ -376,6 +376,7 @@ globalkeys = awful.util.table.join(
                                                       })
                                                   end)
                                               end),
+    awful.key({ modkey, "Shift"  }, "t",      function () awful.util.spawn_with_shell("/home/lukasz/Skrypty/touchpad-toggle.sh") end),
     -- extra keyboard keys
     awful.key({ }, "XF86AudioRaiseVolume",    volume_up                                    ),
     awful.key({ }, "XF86AudioLowerVolume",    volume_down                                  ),
