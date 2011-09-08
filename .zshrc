@@ -7,6 +7,8 @@ export SDL_AUDIODRIVER=alsa
 #export AUDIO_DEV="/dev/dsp"
 # java fix for awesome wm
 export _JAVA_AWT_WM_NONREPARENTING=1
+# gtk styles in qt
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 
 # Opcje
