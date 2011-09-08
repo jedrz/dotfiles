@@ -4,9 +4,9 @@ if has("gui_running")
     set guioptions-=L
     set guioptions-=T
     set guioptions-=m
-    "set guifont=Monaco\ 9
+    "set guifont=Monaco\ 8
     "set guifont=Terminus\ 9
-    set guifont=DejaVu\ Sans\ Mono\ 9
+    set guifont=DejaVu\ Sans\ Mono\ 8
     set mousehide
     colorscheme molokai
     "colorscheme kellys
