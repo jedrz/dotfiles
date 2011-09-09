@@ -89,7 +89,7 @@ search_engines.default = search_engines.g
 
 domain_props = {
     ["all"] = {
-        ["user-stylesheet-uri"] = "file://" .. luakit.data_dir .. "/styles/fonts.css"
+        --["user-stylesheet-uri"] = "file://" .. luakit.data_dir .. "/styles/fonts.css"
     }
 }
 
