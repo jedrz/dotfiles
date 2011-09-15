@@ -57,7 +57,7 @@ autorun_apps =
 
 -- {{{ Functions
 function weather()
-    weatherwidget.text = " " .. awful.util.pread("python2 /home/lukasz/Skrypty/weather.py")
+    weatherwidget.text = " " .. awful.util.pread("python2 /home/lukasz/Skrypty/weather")
 end
 
 function date()
@@ -65,7 +65,7 @@ function date()
 end
 
 function mpd()
-    mpdwidget.text = " " .. awful.util.pread("/home/lukasz/Skrypty/mpd-notify.sh")
+    mpdwidget.text = " " .. awful.util.pread("/home/lukasz/Skrypty/mpd-notify")
 end
 
 function volume_get_icon()
