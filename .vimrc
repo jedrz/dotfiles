@@ -12,13 +12,14 @@ if has("gui_running")
         set guifont=Inconsolata\ 12
     endif
     set mousehide
-    colorscheme molokai
+    "colorscheme molokai
     "colorscheme kellys
+    colorscheme solarized
 else
     " vim
     set t_Co=256
-    colorscheme delek
-    " set background=dark
+    "colorscheme delek
+    colorscheme solarized
 endif
 
 set nocompatible
