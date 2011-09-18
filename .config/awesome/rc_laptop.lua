@@ -59,6 +59,10 @@ function date()
     datewidget.text = " " .. awful.util.pread("date +'%a, %d %b %Y, %H:%M'")
 end
 
+function weather()
+    weatherwidget.text = " " .. awful.util.pread("python2 /home/lukasz/Skrypty/weather")
+end
+
 -- volume notifications
 function volume_get_icon()
     local status = awful.util.pread("amixer get Master")
@@ -196,6 +200,10 @@ datewidget = widget({ type = "textbox" })
 dateicon = widget({ type = "imagebox" })
 dateicon.image = image(beautiful.date_icon)
 
+weatherwidget = widget({ type = "textbox" })
+weathericon = widget({ type = "imagebox" })
+weathericon.image = image(beautiful.weather_icon)
+
 batwidget = widget({ type = "textbox" })
 vicious.register(batwidget, vicious.widgets.bat, "$1 $2% [$3]", 67, "BAT0")
 
@@ -281,6 +289,9 @@ for s = 1, screen.count() do
         myseparator,
         datewidget,
         dateicon,
+        myseparator,
+        weatherwidget,
+        weathericon,
         myseparator,
         batwidget,
         myseparator,
@@ -528,13 +539,18 @@ awesome.add_signal("exit", function () awful.util.spawn_with_shell("killall mpds
 
 -- {{{ Timers
 -- date
-datetimer = timer { timeout = 53 }
+datetimer = timer { timeout = 60 }
 datetimer:add_signal("timeout", date)
 datetimer:start()
+
+weathertimer = timer { timeout = "7205" }
+weathertimer:add_signal("timeout", weather)
+weathertimer:start()
 -- }}}
 
 -- {{{ Run functions
 date()
+weather()
 -- }}}
 
 -- {{{ Run apps from autorun_apps
