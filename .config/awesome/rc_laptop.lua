@@ -201,6 +201,9 @@ dateicon = widget({ type = "imagebox" })
 dateicon.image = image(beautiful.date_icon)
 
 weatherwidget = widget({ type = "textbox" })
+weatherwidget:buttons(awful.util.table.join(
+    awful.button({ }, 1, weather)
+))
 weathericon = widget({ type = "imagebox" })
 weathericon.image = image(beautiful.weather_icon)
 
