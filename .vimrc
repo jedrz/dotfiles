@@ -21,6 +21,7 @@ else
     "colorscheme delek
     colorscheme solarized
 endif
+set background=dark
 
 set nocompatible
 
