@@ -58,8 +58,9 @@ local RED=$'%{\e[1;31m%}'
 local WHITE=$'%{\e[1;37m%}'
 local NORMAL=$'%{\e[0m%}'
 # prompt
-PROMPT="${BLUE}┌─[${PINK}%n@%m${BLUE}]─[${RED}%~${BLUE}]
-└─> ${NORMAL}"
+#PROMPT="${BLUE}┌─[${PINK}%n@%m${BLUE}]─[${RED}%~${BLUE}]
+#└─> ${NORMAL}"
+PROMPT="[${RED}%~${NORMAL}] ${BLUE}\$${NORMAL} "
 
 # funkcja jest wywoływana po wpisaniu komendy i wciśnięciu entera
 # ustawia standardowy kolor
