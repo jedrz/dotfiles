@@ -133,8 +133,8 @@ require "completion"
 -- `,ts` to toggle scripts, `,tp` to toggle plugins, `,tr` to reset.
 -- Remove all "enable-scripts" & "enable-plugins" lines from your
 -- domain_props table (in config/globals.lua) as this module will conflict.
-require "noscript"
-noscript.enable_scripts = false
+--require "noscript"
+--noscript.enable_scripts = false
 --noscript.enable_plugins = false
 
 require "follow_selected"
