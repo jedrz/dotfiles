@@ -57,8 +57,8 @@ search_engines = {
     w = "http://pl.wikipedia.org/wiki/Special:Search?search=%s",
     y = "http://youtube.com/results?search_query=%s",
     a = "https://wiki.archlinux.org/index.php?title=Special:Search&search=%s",
-    b = "http://google.pl/search?q=site:bbs.archlinux.org %s",
-    p = "http://google.pl/search?q=site:peb.pl %s",
+    b = "http://google.com/search?q=site:bbs.archlinux.org %s",
+    p = "http://google.com/search?q=site:peb.pl %s",
     bt = "http://btjunkie.org/search?q=%s",
     al = "http://allegro.pl/listing.php/search?string=%s",
     luakit_s = "http://luakit.org/search/index/luakit?q=%s"
