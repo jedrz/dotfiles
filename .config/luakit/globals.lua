@@ -22,8 +22,8 @@ local wkv  = string.format("WebKitGTK+/%d.%d.%d", luakit.webkit_major_version, l
 local awkv = string.format("AppleWebKit/%s.%s+", luakit.webkit_user_agent_major_version, luakit.webkit_user_agent_minor_version)
 globals.useragent = string.format("Mozilla/5.0 (%s) %s %s %s", arch, awkv, wkv, lkv)
 --]]
---globals.useragent = "Mozilla/5.0 (X11; U; Linux i686; pl; rv:5.0) Gecko/20100101 Firefox/5.0"
-globals.useragent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.215 Safari/535.1"
+globals.useragent = "Mozilla/5.0 (X11; U; Linux i686; pl; rv:5.0) Gecko/20100101 Firefox/5.0"
+--globals.useragent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.215 Safari/535.1"
 
 -- Search common locations for a ca file which is used for ssl connection validation.
 local ca_files = {
@@ -53,7 +53,7 @@ soup.set_property("accept-policy", cookie_policy.no_third_party)
 -- it to avoid collisions with lua's string.format characters.
 -- See: http://www.lua.org/manual/5.1/manual.html#pdf-string.format
 search_engines = {
-    g = "http://google.pl/search?q=%s",
+    g = "http://google.com/search?q=%s",
     w = "http://pl.wikipedia.org/wiki/Special:Search?search=%s",
     y = "http://youtube.com/results?search_query=%s",
     a = "https://wiki.archlinux.org/index.php?title=Special:Search&search=%s",
