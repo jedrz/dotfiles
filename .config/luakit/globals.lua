@@ -15,16 +15,14 @@ globals = {
 }
 
 -- Make useragent
---[[
 local _, arch = luakit.spawn_sync("uname -sm")
 -- Only use the luakit version if in date format (reduces identifiability)
 local lkv = string.match(luakit.version, "^(%d+.%d+.%d+)")
 globals.useragent = string.format("Mozilla/5.0 (%s) AppleWebKit/%s+ (KHTML, like Gecko) WebKitGTK+/%s luakit%s",
     string.sub(arch, 1, -2), luakit.webkit_user_agent_version,
     luakit.webkit_version, (lkv and ("/" .. lkv)) or "")
---]]
 --globals.useragent = "Mozilla/5.0 (X11; U; Linux i686; pl; rv:5.0) Gecko/20100101 Firefox/5.0"
-globals.useragent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.215 Safari/535.1"
+--globals.useragent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.215 Safari/535.1"
 
 -- Search common locations for a ca file which is used for ssl connection validation.
 local ca_files = {
@@ -42,7 +40,7 @@ for _, ca_file in ipairs(ca_files) do
 end
 
 -- Change to stop navigation sites with invalid or expired ssl certificates
-soup.ssl_strict = false)
+soup.ssl_strict = false
 
 -- Set cookie acceptance policy
 cookie_policy = { always = 0, never = 1, no_third_party = 2 }
