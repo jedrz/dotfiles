@@ -195,7 +195,6 @@ add_binds("normal", {
     buf("^O$",                      function (w, c) w:enter_cmd(":open "    .. (w.view.uri or "")) end),
     buf("^T$",                      function (w, c) w:enter_cmd(":tabopen " .. (w.view.uri or "")) end),
     buf("^W$",                      function (w, c) w:enter_cmd(":winopen " .. (w.view.uri or "")) end),
-    buf("^,g$",                     function (w, c) w:enter_cmd(":open google ") end),
 
     -- History
     key({},          "H",           function (w, m) w:back(m.count)    end),
@@ -205,6 +204,8 @@ add_binds("normal", {
     key({},          "XF86Forward", function (w, m) w:forward(m.count) end),
     key({"Control"}, "o",           function (w, m) w:back(m.count)    end),
     key({"Control"}, "i",           function (w, m) w:forward(m.count) end),
+    buf("^gl$",                     function (w)    w:navigate("luakit://history/") end),
+    buf("^gL$",                     function (w, b, m) for i=1, m.count do w:new_tab("luakit://history/") end end, {count=1}),
 
     -- Tab
     key({"Control"}, "Page_Up",     function (w)       w:prev_tab() end),
