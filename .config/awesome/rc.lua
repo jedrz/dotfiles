@@ -509,7 +509,7 @@ awesome.add_signal("exit", function () awful.util.spawn_with_shell("killall mpds
 
 -- {{{ Timers
 -- date
-datetimer = timer { timeout = 53 }
+datetimer = timer { timeout = 60 }
 datetimer:add_signal("timeout", date)
 datetimer:start()
 
