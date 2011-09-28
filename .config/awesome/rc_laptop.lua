@@ -546,7 +546,7 @@ datetimer = timer { timeout = 60 }
 datetimer:add_signal("timeout", date)
 datetimer:start()
 
-weathertimer = timer { timeout = "7205" }
+weathertimer = timer { timeout = "7177" }
 weathertimer:add_signal("timeout", weather)
 weathertimer:start()
 -- }}}
