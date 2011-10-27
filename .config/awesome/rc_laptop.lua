@@ -407,7 +407,7 @@ globalkeys = awful.util.table.join(
                                                   end
                                               end),
     awful.key({ }, "XF86ScreenSaver",         function () awful.util.spawn("xscreensaver-command -lock") end),
-    awful.key({ }, "XF86Sleep",               function () awful.util.spawn_with_shell("echo \"mem\" | sudo tee /sys/power/state") end),
+    awful.key({ }, "XF86Sleep",               function () awful.util.spawn_with_shell("sudo pm-suspend") end),
     awful.key({ }, "XF86MonBrightnessDown",   brightness_down                              ),
     awful.key({ }, "XF86MonBrightnessUp",     brightness_up                                ),
     awful.key({ }, "XF86Battery",             function ()

@@ -6,7 +6,7 @@ if has("gui_running")
     set guioptions-=m
     if hostname() == "laptop"
         "set guifont=DejaVu\ Sans\ Mono\ 8
-        set guifont=Inconsolata
+        set guifont=Inconsolata\ 11
     else
         "set guifont=Monaco\ 9
         set guifont=Inconsolata\ 12
