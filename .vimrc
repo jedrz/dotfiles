@@ -4,13 +4,14 @@ if has("gui_running")
     set guioptions-=L
     set guioptions-=T
     set guioptions-=m
-    if hostname() == "laptop"
+    "if hostname() == "laptop"
         "set guifont=DejaVu\ Sans\ Mono\ 8
-        set guifont=Inconsolata
-    else
+        "set guifont=Inconsolata
+    "else
         "set guifont=Monaco\ 9
-        set guifont=Inconsolata\ 12
-    endif
+        "set guifont=Inconsolata\ 12
+    "endif
+    set guifont=Inconsolata\ 11
     set mousehide
     "colorscheme molokai
     "colorscheme kellys
