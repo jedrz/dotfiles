@@ -47,7 +47,7 @@ layouts =
 autorun = true
 autorun_apps = 
 {
-    "kadu",
+    "pidgin",
     "mpd",
     "mpdscribble",
     "dropboxd"
