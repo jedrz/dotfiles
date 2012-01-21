@@ -142,7 +142,7 @@ tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
     --tags[s] = awful.tag({ "ℵ", "⌥", "♐", "⌤", "♓" }, s, layouts[1])
-    tags[s] = awful.tag({ "www", 2, 3, 4, 5 }, s, layouts[1])
+    tags[s] = awful.tag({ "www", 2, 3, 4, 5, 6, 7 }, s, layouts[1])
     -- www
     awful.layout.set(browse, tags[s][1])
     awful.tag.setmwfact(0.65, tags[s][1])
@@ -351,8 +351,7 @@ globalkeys = awful.util.table.join(
     -- my keybindigs
     awful.key({ modkey, "Shift"   }, "Delete", function () awful.util.spawn_with_shell("sudo poweroff") end),
     awful.key({ modkey,           }, "p",     function () awful.util.spawn("pcmanfm")   end),
-    awful.key({ modkey,           }, "i",     function () awful.util.spawn("luakit")    end),
-    awful.key({ modkey, "Shift"   }, "i",     function () awful.util.spawn("firefox")   end),
+    awful.key({ modkey,           }, "i",     function () awful.util.spawn("firefox")    end),
     awful.key({ modkey,           }, "a",     function () awful.util.spawn("anki")      end),
     awful.key({ modkey,           }, "c",     function () awful.util.spawn(terminal .. " -e ncmpcpp") end),
     awful.key({ modkey, "Control" }, "c",     function ()
