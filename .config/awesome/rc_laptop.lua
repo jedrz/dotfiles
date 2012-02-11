@@ -411,7 +411,7 @@ globalkeys = awful.util.table.join(
     awful.key({ }, "XF86MonBrightnessUp",     brightness_up                                ),
     awful.key({ }, "XF86Battery",             function ()
                                                   naughty.notify({
-                                                      text = awful.util.pread("acpitool -B"),
+                                                      text = awful.util.pread("acpi -i"),
                                                       timeout = 15
                                                   })
                                               end)
