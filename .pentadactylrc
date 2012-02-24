@@ -3,3 +3,5 @@ set ds=g
 set go-=r
 noremap j 5j
 noremap k 5k
+map > :tabm +1<CR>
+map < :tabm -1<CR>
