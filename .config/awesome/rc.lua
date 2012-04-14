@@ -142,7 +142,7 @@ tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
     --tags[s] = awful.tag({ "ℵ", "⌥", "♐", "⌤", "♓" }, s, layouts[1])
-    tags[s] = awful.tag({ "www", 2, 3, 4, 5, 6, 7 }, s, layouts[1])
+    tags[s] = awful.tag({ "www", 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
     -- www
     awful.layout.set(browse, tags[s][1])
     awful.tag.setmwfact(0.65, tags[s][1])
