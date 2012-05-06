@@ -497,9 +497,9 @@ awful.rules.rules = {
                      keys = clientkeys,
                      buttons = clientbuttons,
                      size_hints_honor = false } },
-    { rule = { class = "Gimp" },
+    --[[{ rule = { class = "Gimp" },
       properties = { floating = true },
-      callback = awful.titlebar.add },
+      callback = awful.titlebar.add },]]
     { rule = { class = "Kadu" },
       properties = { floating = true },
       callback = awful.titlebar.add },
