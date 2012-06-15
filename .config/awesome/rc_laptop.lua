@@ -373,7 +373,8 @@ globalkeys = awful.util.table.join(
 
     -- my keybindigs
     awful.key({ modkey, "Shift"   }, "Delete", function () awful.util.spawn_with_shell("sudo poweroff") end),
-    awful.key({ modkey,           }, "p",     function () awful.util.spawn("pcmanfm")   end),
+    --awful.key({ modkey,           }, "p",     function () awful.util.spawn("pcmanfm")   end),
+    awful.key({ modkey,           }, "p",     function () awful.util.spawn(terminal .. "-e ranger") end),
     awful.key({ modkey,           }, "i",     function () awful.util.spawn("firefox")    end),
     awful.key({ modkey,           }, "a",     function () awful.util.spawn("anki")      end),
     awful.key({ modkey,           }, "c",     function () awful.util.spawn(terminal .. " -e ncmpcpp") end),
