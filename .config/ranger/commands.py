@@ -1112,4 +1112,4 @@ class puburl(Command):
         # show the output of 'dropbox' script
         output = check_output(['dropbox', 'puburl',
                                selected_files[0].path])
-        self.fm.notify(output.decode('utf-8'))
+        self.fm.notify(output.decode('utf-8'), duration=20)
