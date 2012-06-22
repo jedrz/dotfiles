@@ -1090,3 +1090,26 @@ class compress(Command):
         extension = ['.zip', '.tar.gz', '.rar', '.7z']
         return ['compress ' + \
                 os.path.basename(self.fm.env.cwd.path) + ext for ext in extension]
+
+
+class puburl(Command):
+    """
+    :puburl
+
+    Show and save in clipboard public url of selected file
+    from dropbox folder
+    """
+    
+    def execute(self):
+        from subprocess import check_output
+
+        selected_files = self.fm.env.get_selection()
+        
+        if not selected_files:
+            self.fm.notify('No selection', bad=True)
+            return
+
+        # show the output of 'dropbox' script
+        output = check_output(['dropbox', 'puburl',
+                               selected_files[0].path])
+        self.fm.notify(output.decode('utf-8'))
