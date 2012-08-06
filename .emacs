@@ -22,6 +22,9 @@
 ; line numbers
 (global-linum-mode 1)
 
+; column number in status bar
+(setq column-number-mode t)
+
 ; remove splash screen
 (setq inhibit-splash-screen t)
 
