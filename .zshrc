@@ -1,5 +1,5 @@
-export EDITOR="vim"
-export BROWSER="luakit"
+export EDITOR="emacs"
+export BROWSER="firefox"
 # skype camera
 #export LD_PRELOAD=/usr/lib/libv4l/v4l1compat.so
 # dosbox
@@ -78,10 +78,11 @@ zsh-mime-setup
 alias ..='cd ..'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-#alias pyaur='python2 ~/Programowanie/python/skrypty/pyaur/pyaur.py'
 alias wrar='wine ~/.wine/drive_c/Program\ Files/WinRAR/WinRAR.exe'
 alias gcc='gcc -Wall'
 alias g++='g++ -Wall'
+alias e='emacsclient -c'
+alias ec='emacsclient -t'
 
 # Funkcje
 extract () {
