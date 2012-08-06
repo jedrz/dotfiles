@@ -29,7 +29,7 @@
 (setq inhibit-splash-screen t)
 
 ; font
-(set-default-font "Inconsolata-12")
+(set-default-font "Inconsolata-11")
 
 ; packages archives
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
