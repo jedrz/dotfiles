@@ -31,7 +31,7 @@
 ; font
 (set-default-font "Inconsolata-12")
 
-; packages
+; packages archives
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
@@ -50,3 +50,18 @@
 
 ; hide scroll bars
 (scroll-bar-mode -1)
+
+; disable arrow keys
+(defun  disabled-key ()
+  "Assign this to disable a key"
+  (interactive)
+  (print "All your arrow keys are belong to me. Have a nice day!"))
+
+(global-set-key (kbd "<up>")      'disabled-key)
+(global-set-key (kbd "<down>")    'disabled-key)
+(global-set-key (kbd "<left>")    'disabled-key)
+(global-set-key (kbd "<right>")   'disabled-key)
+(global-set-key (kbd "<C-up>")      'disabled-key)
+(global-set-key (kbd "<C-down>")    'disabled-key)
+(global-set-key (kbd "<C-left>")    'disabled-key)
+(global-set-key (kbd "<C-right>")   'disabled-key)
