@@ -52,16 +52,17 @@
 (scroll-bar-mode -1)
 
 ; disable arrow keys
-(defun  disabled-key ()
-  "Assign this to disable a key"
-  (interactive)
-  (print "All your arrow keys are belong to me. Have a nice day!"))
-
-(global-set-key (kbd "<up>")      'disabled-key)
-(global-set-key (kbd "<down>")    'disabled-key)
-(global-set-key (kbd "<left>")    'disabled-key)
-(global-set-key (kbd "<right>")   'disabled-key)
-(global-set-key (kbd "<C-up>")      'disabled-key)
-(global-set-key (kbd "<C-down>")    'disabled-key)
-(global-set-key (kbd "<C-left>")    'disabled-key)
-(global-set-key (kbd "<C-right>")   'disabled-key)
+(global-unset-key (kbd "<left>") )
+(global-unset-key (kbd "<right>") )
+(global-unset-key (kbd "<up>") )
+(global-unset-key (kbd "<down>") )
+ 
+(global-unset-key (kbd "C-<left>") )
+(global-unset-key (kbd "C-<right>") )
+(global-unset-key (kbd "C-<up>") )
+(global-unset-key (kbd "C-<down>") )
+ 
+(global-unset-key (kbd "M-<left>") )
+(global-unset-key (kbd "M-<right>") )
+(global-unset-key (kbd "M-<up>") )
+(global-unset-key (kbd "M-<down>") )
