@@ -52,17 +52,20 @@
 (scroll-bar-mode -1)
 
 ; disable arrow keys
-(global-unset-key (kbd "<left>") )
-(global-unset-key (kbd "<right>") )
-(global-unset-key (kbd "<up>") )
-(global-unset-key (kbd "<down>") )
+(global-unset-key (kbd "<left>"))
+(global-unset-key (kbd "<right>"))
+(global-unset-key (kbd "<up>"))
+(global-unset-key (kbd "<down>"))
  
-(global-unset-key (kbd "C-<left>") )
-(global-unset-key (kbd "C-<right>") )
-(global-unset-key (kbd "C-<up>") )
-(global-unset-key (kbd "C-<down>") )
+(global-unset-key (kbd "C-<left>"))
+(global-unset-key (kbd "C-<right>"))
+(global-unset-key (kbd "C-<up>"))
+(global-unset-key (kbd "C-<down>"))
  
-(global-unset-key (kbd "M-<left>") )
-(global-unset-key (kbd "M-<right>") )
-(global-unset-key (kbd "M-<up>") )
-(global-unset-key (kbd "M-<down>") )
+(global-unset-key (kbd "M-<left>"))
+(global-unset-key (kbd "M-<right>"))
+(global-unset-key (kbd "M-<up>"))
+(global-unset-key (kbd "M-<down>"))
+
+; rebind C-a to 'back-to-indentation'
+(global-set-key "\C-a" 'back-to-indentation)
