@@ -51,7 +51,8 @@ autorun_apps =
     "pidgin",
     "mpd",
     "mpdscribble",
-    "dropboxd"
+    "dropboxd",
+    "emacs --daemon"
 }
 -- }}}
 
