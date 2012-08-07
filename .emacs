@@ -30,6 +30,7 @@
 
 ; font
 (set-default-font "Inconsolata-11")
+(setq default-frame-alist '((font . "Inconsolata-11")))
 
 ; packages archives
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
