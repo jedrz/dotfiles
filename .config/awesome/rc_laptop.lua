@@ -16,8 +16,9 @@ beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
-editor = "gvim"
-editor_cmd = terminal .. " -e " .. editor
+editor = "emacsclient -c"
+--editor_cmd = terminal .. " -e " .. editor
+editor_cmd = editor
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -379,6 +380,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "i",     function () awful.util.spawn("firefox")    end),
     awful.key({ modkey,           }, "a",     function () awful.util.spawn("anki")      end),
     awful.key({ modkey,           }, "c",     function () awful.util.spawn(terminal .. " -e ncmpcpp") end),
+    awful.key({ modkey,           }, "e",     function () awful.util.spawn(editor) end),
     awful.key({ modkey, "Control" }, "c",     function ()
                                                   awful.prompt.run({ prompt = "Calculate: " },
                                                   mypromptbox[mouse.screen].widget,
