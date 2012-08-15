@@ -76,3 +76,6 @@
 
 ; make edited files end with a carriage return
 (setq require-final-newline t)
+
+; remove trailing whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
