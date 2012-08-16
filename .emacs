@@ -71,6 +71,15 @@
 ; rebind C-a to 'back-to-indentation'
 (global-set-key "\C-a" 'back-to-indentation)
 
+; don't let next-line add new lines at end of file
+(setq next-line-add-newlines nil)
+
+; make edited files end with a carriage return
+(setq require-final-newline t)
+
+; remove trailing whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ; ido mode
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
