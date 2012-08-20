@@ -132,7 +132,7 @@ bindsym $mod+p exec pcmanfm
 # extra keys bindings
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2db- unmute
-bindsym XF86AudioMute exec amixer set Toggle
+bindsym XF86AudioMute exec amixer -q set Master toggle
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc prev
 bindsym XF86AudioPlay exec mpc toggle
