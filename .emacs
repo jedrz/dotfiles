@@ -84,3 +84,6 @@
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 (ido-mode 1)
+
+; any key deletes selection
+(delete-selection-mode)
