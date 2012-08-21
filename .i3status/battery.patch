@@ -1,0 +1,18 @@
+diff --git a/src/print_battery_info.c b/src/print_battery_info.c
+index 3e130c7..53f93c1 100644
+--- a/src/print_battery_info.c
++++ b/src/print_battery_info.c
+@@ -163,6 +163,13 @@ void print_battery_info(yajl_gen json_gen, char *buffer, int number, const char
+                         ((float)present_rate / 1000.0 / 1000.0));
+ 
+                 END_COLOR;
++        } else {
++                /* battery is not discharging
++                 * set empty buffers to 'N\A'
++                 */
++                (void)sprintf(remainingbuf, "N\\A");
++                (void)sprintf(emptytimebuf, "N\\A");
++                (void)sprintf(consumptionbuf, "N\\A");
+         }
+ #elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
+         int state;
