@@ -144,4 +144,5 @@ bindsym XF86AudioStop exec mpc stop
 # finds out, if available)
 bar {
         status_command i3status -c ~/.i3status/i3status.conf
+        position top
 }

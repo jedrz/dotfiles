@@ -148,4 +148,5 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 # finds out, if available)
 bar {
         status_command i3status -c ~/.i3status/i3status-laptop.conf
+        position top
 }
