@@ -91,3 +91,6 @@
 ; highlight matching parens
 (show-paren-mode 1)
 (setq show-paren-delay 0)
+
+; kill-ring length
+(setq kill-ring-max 500)
