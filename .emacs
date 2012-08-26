@@ -1,4 +1,4 @@
-; backup files
+;; backup files
 (setq
    backup-by-copying t ; don't clobber symlinks
    backup-directory-alist
@@ -8,51 +8,51 @@
    kept-old-versions 2
    version-control t) ; use versioned backups
 
-; autosave
+;; autosave
 (setq auto-save-file-name-transforms
       `((".*" "~/.emacs.d/autosaves/\\1" t)))
 
-; spaces for indentation
+;; spaces for indentation
 (setq-default indent-tabs-mode nil
               tab-width 4)
 
-; auto indentation
+;; auto indentation
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
-; line numbers
+;; line numbers
 (global-linum-mode 1)
 
-; column number in status bar
+;; column number in status bar
 (column-number-mode t)
 
-; remove splash screen
+;; remove splash screen
 (setq inhibit-splash-screen t)
 
-; font
+;; font
 (set-default-font "Inconsolata-11")
 (setq default-frame-alist '((font . "Inconsolata-11")))
 
-; packages archives
+;; packages archives
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
-; load external packages
+;; load external packages
 (package-initialize)
 
-; load theme
+;; load theme
 (load-theme 'solarized-dark t)
 
-; system copy and paste
+;; system copy and paste
 (setq x-select-enable-clipboard t)
 
-; hide toolbar
+;; hide toolbar
 (tool-bar-mode -1)
 
-; hide scroll bars
+;; hide scroll bars
 (scroll-bar-mode -1)
 
-; disable arrow keys
+;; disable arrow keys
 (global-unset-key (kbd "<left>"))
 (global-unset-key (kbd "<right>"))
 (global-unset-key (kbd "<up>"))
@@ -68,26 +68,26 @@
 (global-unset-key (kbd "M-<up>"))
 (global-unset-key (kbd "M-<down>"))
 
-; rebind C-a to 'back-to-indentation'
+;; rebind C-a to 'back-to-indentation'
 (global-set-key "\C-a" 'back-to-indentation)
 
-; make edited files end with a carriage return
+;; make edited files end with a carriage return
 (setq require-final-newline t)
 
-; remove trailing whitespace
+;; remove trailing whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-; ido mode
+;; ido mode
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 (ido-mode 1)
 
-; any key deletes selection
+;; any key deletes selection
 (delete-selection-mode)
 
-; highlight matching parens
+;; highlight matching parens
 (show-paren-mode 1)
 (setq show-paren-delay 0)
 
-; kill-ring length
+;; kill-ring length
 (setq kill-ring-max 500)
