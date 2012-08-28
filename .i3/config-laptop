@@ -97,7 +97,7 @@ bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+E exit
 # poweroff
-bindsym $mod+Shift+Delete systemctl poweroff
+bindsym $mod+Shift+Delete exec sudo systemctl poweroff
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
