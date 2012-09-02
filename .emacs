@@ -75,7 +75,7 @@
 (setq require-final-newline t)
 
 ;; remove trailing whitespace
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; ido mode
 (setq ido-enable-flex-matching t)
@@ -104,3 +104,6 @@
 
 ;; replace buffer-menu with ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+
+;; turn off blinking
+(blink-cursor-mode -1)
