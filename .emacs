@@ -91,3 +91,16 @@
 
 ;; kill-ring length
 (setq kill-ring-max 500)
+
+;; turn on Auto Fill mode in text-mode
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+(setq-default fill-column 79)
+
+;; revert buffers automatically associated with files when the changes on disk
+(global-auto-revert-mode 1)
+
+;; auto completion in minibuffer
+(icomplete-mode 1)
+
+;; replace buffer-menu with ibuffer
+(global-set-key (kbd "C-x C-b") 'ibuffer)
