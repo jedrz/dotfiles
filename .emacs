@@ -29,8 +29,8 @@
 (setq inhibit-splash-screen t)
 
 ;; font
-(set-default-font "Inconsolata-11")
-(setq default-frame-alist '((font . "Inconsolata-11")))
+(set-default-font "Inconsolata-12")
+(setq default-frame-alist '((font . "Inconsolata-12")))
 
 ;; packages archives
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
