@@ -67,6 +67,7 @@ urxvt.matcher.pattern.1 : \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 *color7:                #eee8d5
 *color15:               #fdf6e3
 
+! some theme
 !*foreground             : #a0a0a0
 !*background            : #1B1D1E
 !*background             : #222222
@@ -94,3 +95,26 @@ urxvt.matcher.pattern.1 : \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 !white
 !*color7                 : #CCCCC6
 !*color15                : #F8F8F2
+
+! zenburn
+!*background: #3f3f3f
+!*foreground: #dcdccc
+!*cursorColor: #aaaaaa
+!*colorUL: #366060
+!*underlineColor: #dfaf8f
+!*color0: #3f3f3f
+!*color1: #cc9393
+!*color2: #7f9f7f
+!*color3: #d0bf8f
+!*color4: #6ca0a3
+!*color5: #dc8cc3
+!*color6: #93e0e3
+!*color7: #dcdccc
+!*color8: #000000
+!*color9: #dca3a3
+!*color10: #bfebbf
+!*color11: #f0dfaf
+!*color12: #8cd0d3
+!*color13: #dc8cc3
+!*color14: #93e0e3
+!*color15: #ffffff
