@@ -19,7 +19,7 @@ fi
 
 export EDITOR='emacs'
 export VISUAL='emacs'
-export PAGER='less'
+#export PAGER='less'
 
 #
 # Language
