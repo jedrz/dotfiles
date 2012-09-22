@@ -17,9 +17,11 @@ fi
 # Editors
 #
 
-export EDITOR='emacs'
-export VISUAL='emacs'
+export EDITOR='emacsclient -c'
+export VISUAL='emacsclient -c'
 #export PAGER='less'
+# automatically start an emacs daemon if no one is started yet
+export ALTERNATE_EDITOR=""
 
 #
 # Language
