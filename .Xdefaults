@@ -28,4 +28,4 @@ urxvt.urlLauncher       : /usr/bin/firefox
 urxvt.matcher.pattern.1 : \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 
 ! load theme
-#include "/home/lukasz/.colors/solarized-dark"
+#include "/home/lukasz/.colors/tomorrow-night"
