@@ -17,7 +17,7 @@ sep = StaticWidget(' << ')
 
 clock = ClockWidget(
     60,
-    '%a, %d %b %Y, %H:%M:%S')
+    '%a, %d %b %Y, %H:%M')
 
 alsa = AlsaWidget(
     120 if is_laptop else 31,
