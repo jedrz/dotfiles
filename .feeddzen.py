@@ -39,7 +39,7 @@ mpd = MPDWidgetMPC(
 if is_laptop:
     widgets = [
         bat, sep,
-        volume, sep,
+        alsa, sep,
         clock
     ]
 else:
