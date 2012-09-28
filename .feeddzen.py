@@ -52,9 +52,9 @@ if is_laptop:
 if not is_laptop:
     def mpd_f(playing, d):
         if playing:
-            return 'MPD: {artist} - {title}'.format(**d)
+            return '{artist} - {title}'.format(**d)
         else:
-            return 'MPD: stop'
+            return 'stop'
     mpd_w = mpd.MPDWidgetMPC(37, mpd_f)
 
 # The first item will be placed at left side.
