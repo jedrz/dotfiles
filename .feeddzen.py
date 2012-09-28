@@ -4,6 +4,7 @@
 import locale
 import platform
 import os.path
+import time
 
 from feeddzen.manager import Manager
 from feeddzen.plugins import *
@@ -16,50 +17,58 @@ is_laptop = platform.node() == 'laptop'
 # Icons
 icon_path = os.path.expanduser('~/.xbm-icons')
 def create_icons_dict(**kwds):
-    d = {icon_short: StaticWidget('^i({}) '.format(os.path.join(icon_path, icon_name))) \
+    d = {icon_short: core.StaticWidget('^i({}) '.format(
+                os.path.join(icon_path, icon_name))) \
              for icon_short, icon_name in kwds.items()}
     return d
 
 icons = create_icons_dict(bat='bat_full_01.xbm',
                           clock='clock.xbm',
-                          alsa='spkr_01.xbm',
+                          vol='spkr_01.xbm',
                           mpd='play.xbm')
 
 # Create widgets.
-sep = StaticWidget(' << ')
+sep = core.StaticWidget(' << ')
 
-clock = ClockWidget(
-    60,
-    '%a, %d %b %Y, %H:%M')
+def clock_f():
+    return time.strftime('%a, %d %b %Y, %H:%M')
+clock_w = core.Widget(60, clock_f)
 
-alsa = AlsaWidget(
-    120 if is_laptop else 31,
-    '{volume} [{state}]')
+def vol_f(volume, muted):
+    state = 'off' if muted else 'on'
+    return '{}% [{}]'.format(volume, state)
+vol_w = volume.AlsaWidget(97 if is_laptop else 31, vol_f)
 
 if is_laptop:
-    bat = BatteryWidget(
-        39,
-        '{percentage}',
-        '{percentage} [{hours}:{minutes}:{seconds}]',
-        '{percentage} [{hours}:{minutes}:{seconds}]')
+    def bat_f(state, d):
+        if state == 'charging':
+            return '{percentage}% [{hours}:{minutes}:{seconds}]'.format(**d)
+        elif state == 'discharging':
+            return '{percentage}% [{hours}:{minutes}:{seconds}]'.format(**d)
+        else:
+            return '{percentage}%'.format(**d)
+    bat_w = battery.BatteryWidget(67, bat_f)
 
-mpd = MPDWidgetMPC(
-    30,
-    '%artist% - %title%',
-    'stop')
+if not is_laptop:
+    def mpd_f(playing, d):
+        if playing:
+            return 'MPD: {artist} - {title}'.format(**d)
+        else:
+            return 'MPD: stop'
+    mpd_w = mpd.MPDWidgetMPC(37, mpd_f)
 
 # The first item will be placed at left side.
 if is_laptop:
     widgets = [
-        icons['bat'], bat, sep,
-        icons['alsa'], alsa, sep,
-        icons['clock'], clock
+        icons['bat'], bat_w, sep,
+        icons['vol'], vol_w, sep,
+        icons['clock'], clock_w
     ]
 else:
     widgets = [
-        icons['mpd'], mpd, sep,
-        icons['alsa'], alsa, sep,
-        icons['clock'], clock
+        icons['mpd'], mpd_w, sep,
+        icons['vol'], vol_w, sep,
+        icons['clock'], clock_w
     ]
 
 # x pos - to see workspaces
