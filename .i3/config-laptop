@@ -133,8 +133,8 @@ bindsym $mod+c exec i3-sensible-terminal -e ncmpcpp
 bindsym $mod+p exec pcmanfm
 
 # extra keys bindings
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 4%+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 4%- unmute
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 4%+
+bindsym XF86AudioLowerVolume exec amixer -q set Master 4%-
 bindsym XF86AudioMute exec amixer -q set Master toggle
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc prev
