@@ -42,9 +42,9 @@ vol_w = volume.AlsaWidget(97 if is_laptop else 31, vol_f)
 if is_laptop:
     def bat_f(state, d):
         if state == 'charging':
-            return '{percentage}% [{hours}:{minutes}:{seconds}]'.format(**d)
+            return '{percentage}% [{hours}:{minutes}]'.format(**d)
         elif state == 'discharging':
-            return '{percentage}% [{hours}:{minutes}:{seconds}]'.format(**d)
+            return '{percentage}% [{hours}:{minutes}]'.format(**d)
         else:
             return '{percentage}%'.format(**d)
     bat_w = battery.BatteryWidget(67, bat_f)
