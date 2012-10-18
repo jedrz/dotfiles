@@ -137,7 +137,7 @@ bindsym XF86AudioPrev exec mpc prev
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioStop exec mpc stop
 bindsym XF86ScreenSaver exec dm-tool lock
-bindsym XF86Sleep exec systemctl suspend
+bindsym XF86Sleep exec sudo systemctl suspend
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 
