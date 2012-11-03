@@ -127,7 +127,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+z exec emacsclient -c
 bindsym $mod+i exec firefox
 bindsym $mod+c exec i3-sensible-terminal -e ncmpcpp
-bindsym $mod+p exec pcmanfm
+bindsym $mod+p exec thunar
 
 # extra keys bindings
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 4%+
