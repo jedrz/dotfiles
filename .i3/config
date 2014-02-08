@@ -126,7 +126,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # apps bindings
-bindsym $mod+z exec emacsclient -c
+bindsym $mod+z exec ~/Skrypty/emacs-with-daemon
 bindsym $mod+i exec firefox
 bindsym $mod+c exec i3-sensible-terminal -e ncmpcpp
 bindsym $mod+p exec thunar
