@@ -42,7 +42,9 @@ if is_laptop:
                     format_up="{essid} {quality:03.0f}%")
 
 status.register("alsa",
-                format="♪ {volume}%")
+                format="♪ {volume}%{muted}",
+                muted=" off",
+                unmuted="")
 
 status.register("mpd",
                 format="{status} [{artist} - {title}]",
