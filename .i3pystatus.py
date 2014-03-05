@@ -46,6 +46,13 @@ status.register("alsa",
                 muted=" off",
                 unmuted="")
 
+siedlce_location_code = "PLXX0028"
+warsaw_location_code = "PLMA1493"
+location_code = siedlce_location_code if is_laptop else warsaw_location_code
+status.register("weather",
+                format="W: {current_temp}",
+                location_code=location_code)
+
 status.register("mpd",
                 format="{status} [{artist} - {title}]",
                 status={
