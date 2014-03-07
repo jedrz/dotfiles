@@ -12,16 +12,16 @@ is_laptop = platform.node() == 'laptop'
 status = Status(standalone=True)
 
 status.register("clock",
-                format="%a, %-d %b %Y, %X")
+                format="⌚ %a, %-d %b %Y, %X")
 
 status.register("load",
-                format="Load: {avg1} {avg5}")
+                format="☢ {avg1} {avg5}")
 
 status.register("temp",
-                format="{temp:.0f}°C")
+                format="⌘ {temp:.0f}°C")
 
 status.register("battery",
-                format="{status} {percentage:.2f}% [{remaining:%E%hh:%Mm}]",
+                format="⚡ {percentage:.2f}% [{remaining:%E%hh:%Mm} ]{status}",
                 alert=True,
                 alert_percentage=5,
                 status={
@@ -39,18 +39,19 @@ if not is_laptop:
 if is_laptop:
     status.register("wireless",
                     interface="wlan0",
-                    format_up="{essid} {quality:03.0f}%")
+                    format_up=" {essid} {quality:03.0f}%",
+                    format_down=" {interface} down")
 
 status.register("alsa",
-                format="♪ {volume}%{muted}",
-                muted=" off",
-                unmuted="")
+                format="{muted} {volume}%",
+                muted="",
+                unmuted="")
 
 siedlce_location_code = "PLXX0028"
 warsaw_location_code = "PLMA1493"
 location_code = siedlce_location_code if is_laptop else warsaw_location_code
 status.register("weather",
-                format="W: {current_temp}",
+                format="☀ {current_temp}",
                 location_code=location_code)
 
 status.register("mpd",
