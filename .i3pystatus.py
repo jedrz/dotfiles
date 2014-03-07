@@ -17,24 +17,32 @@ status.register("clock",
 status.register("load",
                 format="☢ {avg1} {avg5}")
 
-status.register("temp",
-                format="⌘ {temp:.0f}°C")
+status.register("mem",
+                format="ⓜ {used_mem:.0f} MiB")
 
-status.register("battery",
-                format="⚡ {percentage:.2f}% [{remaining:%E%hh:%Mm} ]{status}",
-                alert=True,
-                alert_percentage=5,
-                status={
-                    'DIS': '↓',
-                    'CHR': '↑',
-                    'FULL': '=',
-                })
+status.register("cpu_usage",
+                format="ⓒ {usage:02}%")
 
 if not is_laptop:
-    # FIXME: change to dhcpcd
+    status.register("temp",
+                    format=" {temp:.0f}°C")
+
+if is_laptop:
+    status.register("battery",
+                    format="⚡ {percentage:.2f}% [{remaining:%E%hh:%Mm} ]"
+                           "{status}",
+                    alert=True,
+                    alert_percentage=5,
+                    status={
+                        'DIS': '↓',
+                        'CHR': '↑',
+                        'FULL': '=',
+                    })
+
+if not is_laptop:
     status.register("runwatch",
                     name="DHCP",
-                    path="/var/run/dhclient*.pid")
+                    path="/var/run/dhcpcd*.pid")
 
 if is_laptop:
     status.register("wireless",
