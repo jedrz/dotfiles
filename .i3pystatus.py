@@ -59,7 +59,7 @@ status.register("alsa",
                 unmuted="")
 
 siedlce_location_code = "PLXX0042"
-warsaw_location_code = "PLMA1493"
+warsaw_location_code = "PLXX0028"
 location_code = warsaw_location_code if is_laptop else siedlce_location_code
 status.register("weather",
                 format="☀ {current_temp}",
