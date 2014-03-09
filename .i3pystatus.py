@@ -39,6 +39,9 @@ if is_laptop:
                         'FULL': '=',
                     })
 
+    status.register("backlight",
+                    format=" {percentage}%")
+
 if not is_laptop:
     status.register("runwatch",
                     name="DHCP",
