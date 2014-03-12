@@ -63,7 +63,8 @@ warsaw_location_code = "PLXX0028"
 location_code = warsaw_location_code if is_laptop else siedlce_location_code
 status.register("weather",
                 format="☀ {current_temp}",
-                location_code=location_code)
+                location_code=location_code,
+                interval=15 * 60)
 
 status.register("mpd",
                 format="{status} [{artist} - {title}]",
