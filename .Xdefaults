@@ -22,10 +22,9 @@ urxvt.internalBorder    : 1
 urxvt.cursorBlink       : false
 
 ! urxvt url opening
-urxvt.perl-ext-common   : default,matcher
-urxvt.matcher.button    : 1
-urxvt.urlLauncher       : /usr/bin/firefox
-urxvt.matcher.pattern.1 : \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+URxvt.perl-ext-common   : default,matcher
+URxvt.url-launcher      : /usr/bin/firefox
+URxvt.matcher.button    : 1
 
 ! load theme
 #include "/home/lukasz/.colors/tomorrow-night"
