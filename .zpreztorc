@@ -32,9 +32,9 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'archive' \
+  'prompt' \
   'git' \
-  'prompt'
+  'archive'
 
 #
 # Editor
