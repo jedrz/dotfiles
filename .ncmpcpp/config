@@ -231,7 +231,7 @@ song_columns_list_format = "(7f)[green]{l} (25)[cyan]{a} (40)[]{t|f} (30)[red]{b
 ## Attention: It doesn't support song format anymore.
 ## Use `ncmpcpp --now-playing SONG_FORMAT` instead.
 ##
-execute_on_song_change = "notify-send \"$(ncmpcpp --now-playing)\""
+execute_on_song_change = "notify-send "$(mpc | head -n 1)""
 #
 #playlist_show_remaining_time = "no"
 #
@@ -265,7 +265,7 @@ progressbar_look = "=|"
 #
 user_interface = "alternative" (classic/alternative)
 #
-media_library_left_column = "a" (possible values: a,y,g,c,p, legend above)
+#media_library_left_column = "a" (possible values: a,y,g,c,p, legend above)
 #
 #default_find_mode = "wrapped" (wrapped/normal)
 #
@@ -398,9 +398,9 @@ display_bitrate = "yes"
 ## ncmpcpp's browser screen.
 ##
 #
-allow_physical_files_deletion = "yes"
+#allow_physical_files_deletion = "yes"
 #
-allow_physical_directories_deletion = "yes"
+#allow_physical_directories_deletion = "yes"
 #
 #external_editor = ""
 #
