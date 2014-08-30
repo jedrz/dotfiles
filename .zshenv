@@ -115,7 +115,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 #export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 # Use system anti-aliased fonts and make swing use the GTK look and feel
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+#export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 
 # Maven home
 export M2_HOME="/opt/maven"
