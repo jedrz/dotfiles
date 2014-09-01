@@ -18,9 +18,6 @@ setopt printexitvalue
 # Custom aliases
 # to prevent from showing in every folder git info
 alias dotgit='git --git-dir=$HOME/.dotfiles --work-tree=$HOME '
-# other aliases
-alias gcc='gcc -Wall'
-alias g++='g++ -Wall'
 alias e='emacsclient -c'
 alias ec='emacsclient -t'
 alias extract='unarchive'
