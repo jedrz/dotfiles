@@ -34,7 +34,8 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'prompt' \
   'git' \
-  'archive'
+  'archive' \
+  'history-substring-search'
 
 #
 # Editor
