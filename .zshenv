@@ -109,7 +109,7 @@ fi
 export SDL_AUDIODRIVER=alsa
 
 # java fix for tiling wms
-export _JAVA_AWT_WM_NONREPARENTING=1
+#export _JAVA_AWT_WM_NONREPARENTING=1
 
 # gtk styles in qt (better to put these line in /etc/profile)
 #export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
