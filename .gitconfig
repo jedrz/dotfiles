@@ -11,4 +11,8 @@
 [credential]
 	helper = cache --timeout=86400
 [push]
-	default = simple
+    default = simple
+[include]
+    path = ~/.gitkurwa/config
+[include]
+    path = ~/.gitkurwa/configNSFW_PL
