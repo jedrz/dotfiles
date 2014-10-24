@@ -26,11 +26,11 @@ alias extract='unarchive'
 eval "$(fasd --init auto)"
 
 # Setup zsh-autosuggestions
-source ~/.zsh-autosuggestions/autosuggestions.zsh
-AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=yellow'
+#source ~/.zsh-autosuggestions/autosuggestions.zsh
+#AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=yellow'
 
 # Enable autosuggestions automatically
-zle-line-init() {
-    zle autosuggest-start
-}
-zle -N zle-line-init
+#zle-line-init() {
+#    zle autosuggest-start
+#}
+#zle -N zle-line-init
