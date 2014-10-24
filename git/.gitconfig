@@ -1,15 +1,15 @@
 [user]
-	name = Łukasz Jędrzejewski
-	email = jedrzejewskiluk@gmail.com
-	emacs = jedrzejewskiluk@gmail.com
+    name = Łukasz Jędrzejewski
+    email = jedrzejewskiluk@gmail.com
+    emacs = jedrzejewskiluk@gmail.com
 [github]
-	user = jedrz
+    user = jedrz
 [credential "https://github.com"]
-	username = jedrz
+    username = jedrz
 [credential "https://bitbucket.org"]
-	username = jedrz
+    username = jedrz
 [credential]
-	helper = cache --timeout=86400
+    helper = cache --timeout=86400
 [push]
     default = simple
 [include]
