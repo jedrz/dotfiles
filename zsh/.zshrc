@@ -25,6 +25,11 @@ alias extract='unarchive'
 # fasd
 command -v fasd &> /dev/null && eval "$(fasd --init auto)"
 
+# deer
+source ~/.zplugins/deer/deer
+zle -N deer-launch
+bindkey '\ek' deer-launch
+
 # Setup zsh-autosuggestions
 #source ~/.zsh-autosuggestions/autosuggestions.zsh
 #AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=yellow'
