@@ -4,3 +4,6 @@
 [submodule "zsh/.zprezto"]
 	path = zsh/.zprezto
 	url = https://github.com/sorin-ionescu/prezto.git
+[submodule "zsh/.zsh-autosuggestions"]
+	path = zsh/.zsh-autosuggestions
+	url = git://github.com/tarruda/zsh-autosuggestions
