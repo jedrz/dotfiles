@@ -21,7 +21,7 @@ alias ec='emacsclient -t'
 alias extract='unarchive'
 
 # fasd
-command -v fasd &> /dev/null && eval "$(fasd --init auto)"
+eval "$(fasd --init auto)"
 
 # deer
 source ~/.zplugins/deer/deer

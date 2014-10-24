@@ -82,6 +82,7 @@ path=(
   /usr/{bin,sbin}
   /{bin,sbin}
   ~/.bin
+  ~/.zplugins/fasd
   $path
 )
 
