@@ -16,8 +16,6 @@ fi
 setopt printexitvalue
 
 # Custom aliases
-# to prevent from showing in every folder git info
-alias dotgit='git --git-dir=$HOME/.dotfiles --work-tree=$HOME '
 alias e='emacsclient -c'
 alias ec='emacsclient -t'
 alias extract='unarchive'
