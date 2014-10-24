@@ -23,7 +23,7 @@ alias ec='emacsclient -t'
 alias extract='unarchive'
 
 # fasd
-eval "$(fasd --init auto)"
+command -v fasd &> /dev/null && eval "$(fasd --init auto)"
 
 # Setup zsh-autosuggestions
 #source ~/.zsh-autosuggestions/autosuggestions.zsh
