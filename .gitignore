@@ -1,1 +1,4 @@
 ncmpcpp/.ncmpcpp/error.log
+
+/clojure/.lein/repl-port
+*.jar
