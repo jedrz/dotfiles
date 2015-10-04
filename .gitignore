@@ -1,4 +1,5 @@
 ncmpcpp/.ncmpcpp/error.log
 
 /clojure/.lein/repl-port
+/clojure/.lein/self-installs
 *.jar
