@@ -19,6 +19,7 @@ setopt printexitvalue
 alias e='emacsclient -c'
 alias ec='emacsclient -t'
 alias extract='unarchive'
+alias prettyjson='python -m json.tool'
 
 # fasd
 eval "$(fasd --init auto)"
