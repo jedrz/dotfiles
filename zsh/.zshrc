@@ -21,6 +21,9 @@ alias ec='emacsclient -t'
 alias extract='unarchive'
 alias prettyjson='python -m json.tool'
 
+# Git
+alias gpnt='git push --no-thin'
+
 # fasd
 eval "$(fasd --init auto)"
 
