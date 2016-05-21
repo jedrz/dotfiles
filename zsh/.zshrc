@@ -41,3 +41,8 @@ bindkey '\ek' deer-launch
 #    zle autosuggest-start
 #}
 #zle -N zle-line-init
+
+# Enable virtualenvwrapper
+if hash virtualenvwrapper.sh &> /dev/null; then
+    source virtualenvwrapper.sh
+fi
