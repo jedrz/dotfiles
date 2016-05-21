@@ -16,3 +16,5 @@
     path = ~/.gitkurwa/config
 [include]
     path = ~/.gitkurwa/configNSFW_PL
+[include]
+    path = ~/.gitconfig_private
