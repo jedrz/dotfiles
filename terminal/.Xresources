@@ -27,4 +27,4 @@ URxvt.url-launcher      : /usr/bin/firefox
 URxvt.matcher.button    : 1
 
 ! load theme
-#include "/home/lukasz/.colors/tomorrow-night"
+#include ".colors/tomorrow-night"
