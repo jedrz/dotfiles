@@ -120,3 +120,7 @@ export SDL_AUDIODRIVER=alsa
 
 # Maven home
 export M2_HOME="/opt/maven"
+
+if [[ -e ".zshenv-private" ]]; then
+    source ".zshenv-private"
+fi
