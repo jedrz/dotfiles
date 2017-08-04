@@ -47,6 +47,9 @@ if hash virtualenvwrapper.sh &> /dev/null; then
     source virtualenvwrapper.sh
 fi
 
+# gopass autocompletion
+source <(gopass completion zsh)
+
 # Display date in the RPROMPT for pure theme.
 # https://github.com/sindresorhus/pure/issues/170
 prompt_pure_apply_rprompt() {
