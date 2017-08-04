@@ -18,6 +18,7 @@ fi
 #
 
 export EDITOR='emacsclient -c'
+export ALTERNATE_EDITOR=''
 export VISUAL='emacsclient -c'
 export PAGER='less'
 # automatically start an emacs daemon if no one is started yet
