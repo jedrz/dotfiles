@@ -1,6 +1,6 @@
 askformore: false
 autoimport: true
-autosync: false
+autosync: true
 cliptimeout: 45
 noconfirm: false
 path: /home/lukasz/.password-store
