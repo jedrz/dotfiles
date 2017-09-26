@@ -8,6 +8,8 @@
     username = jedrz
 [credential "https://bitbucket.org"]
     username = jedrz
+[credential "https://gitlab.com"]
+    username = jedrz
 [credential]
     helper = cache --timeout=86400
 [push]
