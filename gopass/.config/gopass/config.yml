@@ -5,4 +5,4 @@ cliptimeout: 45
 noconfirm: false
 path: /home/lukasz/.password-store
 safecontent: false
-version: 1.3.0
+version: 1.3.2
