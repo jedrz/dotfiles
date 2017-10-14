@@ -1,8 +1,11 @@
-askformore: false
-autoimport: true
-autosync: true
-cliptimeout: 45
-noconfirm: false
-path: /home/lukasz/.password-store
-safecontent: false
-version: 1.3.2
+root:
+  askformore: false
+  autoimport: true
+  autosync: true
+  cliptimeout: 45
+  noconfirm: false
+  nopager: false
+  path: /home/lukasz/.password-store
+  safecontent: false
+mounts: {}
+version: 1.4.1
