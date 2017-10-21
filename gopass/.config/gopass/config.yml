@@ -8,4 +8,4 @@ root:
   path: /home/lukasz/.password-store
   safecontent: false
 mounts: {}
-version: 1.4.1
+version: 1.5.0
