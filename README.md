@@ -15,3 +15,7 @@ To install all modules:
 To uninstall them:
 
     $ make uninstall
+
+To choose only some modules specify `PKGS` explicitly:
+
+    $ make install PKGS=zsh
