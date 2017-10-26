@@ -8,7 +8,7 @@ STOW-INSTALL = $(STOW-CMD) -R
 STOW-UNINSTALL = $(STOW-CMD) -D
 
 PKGS = \
-	R awesome clojure fonts git gopass i3 luakit ncmpcpp pacaur pentadactyl \
+	R awesome clojure fonts git gopass i3 luakit ncmpcpp pacaur \
 	terminal vim xbm-icons zsh
 
 install:
