@@ -24,9 +24,6 @@ alias prettyjson='python -m json.tool'
 # Git
 alias gpnt='git push --no-thin'
 
-# fasd
-eval "$(fasd --init auto)"
-
 # deer
 source ~/.zplugins/deer/deer
 zle -N deer-launch
