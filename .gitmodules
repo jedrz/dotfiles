@@ -7,9 +7,3 @@
 [submodule "zsh/.zplugins/deer"]
 	path = zsh/.zplugins/deer
 	url = https://github.com/Vifon/deer.git
-[submodule "zsh/.zplugins/zsh-autosuggestions"]
-	path = zsh/.zplugins/zsh-autosuggestions
-	url = git://github.com/tarruda/zsh-autosuggestions
-[submodule "zsh/.zplugins/fasd"]
-	path = zsh/.zplugins/fasd
-	url = https://github.com/clvv/fasd.git
