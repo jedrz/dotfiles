@@ -21,4 +21,4 @@
 [include]
     path = ~/.gitconfig_private
 [alias]
-	pullall = !git pull && git submodule update --init --recursive
+    pullall = !git pull && git submodule update --init --recursive
