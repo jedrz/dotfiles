@@ -1,21 +1,11 @@
 {
   "activeProfiles": {
-    "General": "power_copy_1508959721243",
+    "General": "power",
     "Keybindings": "my_vimium",
     "Appearance": "default"
   },
   "profiles": {
-    "General": {
-      "power_copy_1508959721243": {
-        "enabled": true,
-        "preventStealFocus": true,
-        "disablePageShortcuts": false,
-        "autoActivateHint": true,
-        "hintDetectByCursorStyle": true,
-        "smoothScroll": true,
-        "scrollStep": 15
-      }
-    },
+    "General": {},
     "Keybindings": {
       "my_vimium": {
         "physicalKeys": false,
@@ -61,8 +51,8 @@
         "openLinkInForegroundTab": [
           [
             {
-              "code": "KeyG",
-              "key": "g",
+              "code": "KeyA",
+              "key": "a",
               "shiftKey": false,
               "ctrlKey": false,
               "altKey": false,
