@@ -12,6 +12,7 @@
     username = jedrz
 [credential]
     helper = !pass-git-helper $@
+    helper = cache --timeout=86400
 [push]
     default = simple
 [include]
