@@ -20,3 +20,5 @@
     path = ~/.gitkurwa/configNSFW_PL
 [include]
     path = ~/.gitconfig_private
+[alias]
+	pullall = !git pull && git submodule update --init --recursive
