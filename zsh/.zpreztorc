@@ -37,7 +37,8 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'git' \
   'archive' \
-  'history-substring-search'
+  'history-substring-search' \
+  'autosuggestions'
 
 #
 # Editor
