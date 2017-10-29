@@ -38,7 +38,8 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'archive' \
   'history-substring-search' \
-  'autosuggestions'
+  'autosuggestions' \
+  'docker'
 
 #
 # Editor
