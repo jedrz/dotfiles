@@ -7,7 +7,7 @@ root:
   nopager: false
   path: /home/lukasz/.password-store
   safecontent: false
-  usesymbols: true
+  usesymbols: false
   nocolor: false
 mounts: {}
 version: 1.6.0
