@@ -21,9 +21,6 @@ alias ec='emacsclient -t'
 alias extract='unarchive'
 alias prettyjson='python -m json.tool'
 
-# Git
-alias gpnt='git push --no-thin'
-
 # deer
 source ~/.zplugins/deer/deer
 zle -N deer-launch
