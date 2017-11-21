@@ -26,16 +26,6 @@ source ~/.zplugins/deer/deer
 zle -N deer-launch
 bindkey '\ek' deer-launch
 
-# Setup zsh-autosuggestions
-#source ~/.zsh-autosuggestions/autosuggestions.zsh
-#AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=yellow'
-
-# Enable autosuggestions automatically
-#zle-line-init() {
-#    zle autosuggest-start
-#}
-#zle -N zle-line-init
-
 # Enable virtualenvwrapper
 if hash virtualenvwrapper.sh &> /dev/null; then
     source virtualenvwrapper.sh
