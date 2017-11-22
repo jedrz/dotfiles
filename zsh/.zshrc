@@ -26,11 +26,6 @@ source ~/.zplugins/deer/deer
 zle -N deer-launch
 bindkey '\ek' deer-launch
 
-# Enable virtualenvwrapper
-if hash virtualenvwrapper.sh &> /dev/null; then
-    source virtualenvwrapper.sh
-fi
-
 # gopass autocompletion
 source <(gopass completion zsh)
 

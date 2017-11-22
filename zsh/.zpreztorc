@@ -39,7 +39,8 @@ zstyle ':prezto:load' pmodule \
   'archive' \
   'history-substring-search' \
   'autosuggestions' \
-  'docker'
+  'docker' \
+  'python'
 
 #
 # Editor
