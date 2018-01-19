@@ -47,6 +47,16 @@ if (( $+commands[lesspipe.sh] )); then
 fi
 
 #
+# Other
+#
+
+# Maven home
+export M2_HOME="/opt/maven"
+
+# Go home
+export GOPATH="$HOME/.go"
+
+#
 # Paths
 #
 
@@ -84,6 +94,7 @@ path=(
   /{bin,sbin}
   ~/.bin
   ~/.zplugins/fasd
+  "$GOPATH/bin"
   $path
 )
 
@@ -102,25 +113,6 @@ if [[ -d "$TMPDIR" ]]; then
     mkdir -p "$TMPPREFIX"
   fi
 fi
-
-#
-# Custom
-#
-
-# dosbox
-export SDL_AUDIODRIVER=alsa
-
-# java fix for tiling wms
-#export _JAVA_AWT_WM_NONREPARENTING=1
-
-# gtk styles in qt (better to put these line in /etc/profile)
-#export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-
-# Use system anti-aliased fonts and make swing use the GTK look and feel
-#export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
-
-# Maven home
-export M2_HOME="/opt/maven"
 
 if [[ -e ".zshenv-private" ]]; then
     source ".zshenv-private"
