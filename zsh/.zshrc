@@ -26,9 +26,6 @@ source ~/.zplugins/deer/deer
 zle -N deer-launch
 bindkey '\ek' deer-launch
 
-# gopass autocompletion
-source <(gopass completion zsh)
-
 # Display date in the RPROMPT for pure theme.
 # https://github.com/sindresorhus/pure/issues/170
 prompt_pure_apply_rprompt() {
