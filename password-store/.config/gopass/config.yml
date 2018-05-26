@@ -1,13 +1,16 @@
 root:
   askformore: false
+  autoclip: false
   autoimport: true
   autosync: true
   cliptimeout: 45
+  editrecipients: false
+  nocolor: false
   noconfirm: false
   nopager: false
-  path: /home/lukasz/.password-store
+  path: gpgcli-gitcli-fs+file:///home/lukasz/.password-store
   safecontent: false
   usesymbols: false
-  nocolor: false
+  notifications: false
 mounts: {}
-version: 1.6.10
+version: 1.7.0
