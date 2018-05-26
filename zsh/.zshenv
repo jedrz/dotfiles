@@ -28,9 +28,9 @@ export ALTERNATE_EDITOR=""
 # Language
 #
 
-if [[ -z "$LANG" ]]; then
-  eval "$(locale)"
-fi
+#if [[ -z "$LANG" ]]; then
+#  eval "$(locale)"
+#fi
 
 #
 # Less
