@@ -21,6 +21,10 @@ alias ec='emacsclient -t'
 alias extract='unarchive'
 alias prettyjson='python -m json.tool'
 
+# Extend history size
+export HISTSIZE=100000
+export SAVEHIST=100000
+
 # deer
 source ~/.zplugins/deer/deer
 zle -N deer-launch
