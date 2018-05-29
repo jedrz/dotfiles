@@ -19,8 +19,8 @@
     path = ~/.gitkurwa/config
 [include]
     path = ~/.gitkurwa/configNSFW_PL
-[include]
-    path = ~/.gitconfig_private
+[includeIf "gitdir:~/TouK/"]
+    path = ~/.gitconfig-TouK
 [alias]
     pullall = !git pull && git submodule update --init --recursive
     branch-reset-head = !sh -c '[ "$#" -ne 1 ] && echo \"branch-reset-head <new-branch>\" || (git branch $1 && git reset --hard HEAD~1 && git checkout $1)' -
