@@ -45,6 +45,3 @@ prompt_pure_preprompt_render() {
     _prompt_pure_preprompt_render "$@"
     prompt_pure_apply_rprompt
 }
-
-# Load Node Version Manager
-source /usr/share/nvm/init-nvm.sh
