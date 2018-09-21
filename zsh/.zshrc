@@ -42,4 +42,6 @@ prompt_pure_preprompt_render() {
 }
 
 # Load Node Version Manager
-source /usr/share/nvm/init-nvm.sh
+if [[ -f /usr/share/nvm/init-nvm.sh ]]; then
+    source /usr/share/nvm/init-nvm.sh
+fi
