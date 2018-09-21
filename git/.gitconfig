@@ -15,10 +15,6 @@
     helper = cache --timeout=86400
 [push]
     default = simple
-[include]
-    path = ~/.gitkurwa/config
-[include]
-    path = ~/.gitkurwa/configNSFW_PL
 [includeIf "gitdir:~/TouK/"]
     path = ~/.gitconfig-TouK
 [alias]

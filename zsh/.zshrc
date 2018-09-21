@@ -25,11 +25,6 @@ alias prettyjson='python -m json.tool'
 export HISTSIZE=100000
 export SAVEHIST=100000
 
-# deer
-source ~/.zplugins/deer/deer
-zle -N deer-launch
-bindkey '\ek' deer-launch
-
 # Display date in the RPROMPT for pure theme.
 # https://github.com/sindresorhus/pure/issues/170
 prompt_pure_apply_rprompt() {
