@@ -41,6 +41,26 @@ prompt_pure_preprompt_render() {
     prompt_pure_apply_rprompt
 }
 
+# fzf
+if [[ -f /usr/share/fzf/key-bindings.zsh ]]; then
+    source /usr/share/fzf/key-bindings.zsh
+fi
+if [[ -f /usr/share/fzf/completion.zsh ]]; then
+    source /usr/share/fzf/completion.zsh
+fi
+
+# CTRL-O to open with `open` command,
+# CTRL-E or Enter key to open with the $EDITOR
+fo() {
+  local out file key
+  IFS=$'\n' out=($(fzf-tmux --query="$1" --exit-0 --expect=ctrl-o,ctrl-e))
+  key=$(head -1 <<< "$out")
+  file=$(head -2 <<< "$out" | tail -1)
+  if [[ -n "$file" ]]; then
+      [[ "$key" = ctrl-o ]] && xdg-open "$file" || eval ${=EDITOR:-vim} "$file"
+  fi
+}
+
 # Load Node Version Manager
 if [[ -f /usr/share/nvm/init-nvm.sh ]]; then
     source /usr/share/nvm/init-nvm.sh
