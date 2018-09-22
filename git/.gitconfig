@@ -20,3 +20,6 @@
 [alias]
     pullall = !git pull && git submodule update --init --recursive
     branch-reset-head = !sh -c '[ "$#" -ne 1 ] && echo \"branch-reset-head <new-branch>\" || (git branch $1 && git reset --hard HEAD~1 && git checkout $1)' -
+[pager]
+    diff = diff-so-fancy | less --tabs=1,5 -RFX
+    show = diff-so-fancy | less --tabs=1,5 -RFX
