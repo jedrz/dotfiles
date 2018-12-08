@@ -93,6 +93,7 @@ path=(
   /usr/{bin,sbin}
   /{bin,sbin}
   ~/.bin
+  ~/.local/bin
   ~/.zplugins/fasd
   "$GOPATH/bin"
   $path
