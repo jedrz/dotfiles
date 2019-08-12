@@ -65,3 +65,7 @@ fo() {
 if [[ -f /usr/share/nvm/init-nvm.sh ]]; then
     source /usr/share/nvm/init-nvm.sh
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/lukasz/.sdkman"
+[[ -s "/home/lukasz/.sdkman/bin/sdkman-init.sh" ]] && source "/home/lukasz/.sdkman/bin/sdkman-init.sh"
