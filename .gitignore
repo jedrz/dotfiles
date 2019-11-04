@@ -4,3 +4,5 @@ ncmpcpp/.ncmpcpp/error.log
 /clojure/.lein/self-installs
 *.jar
 /password-store/.config/gopass/gopass-logo-small.png
+/scala/.ammonite/cache/
+/scala/.ammonite/history
