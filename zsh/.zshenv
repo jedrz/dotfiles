@@ -115,6 +115,6 @@ if [[ -d "$TMPDIR" ]]; then
   fi
 fi
 
-if [[ -e ".zshenv-private" ]]; then
-    source ".zshenv-private"
+if [[ -f "$HOME/.zshenv-private" ]]; then
+    source "$HOME/.zshenv-private"
 fi
