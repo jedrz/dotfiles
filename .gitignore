@@ -6,3 +6,5 @@ ncmpcpp/.ncmpcpp/error.log
 /password-store/.config/gopass/gopass-logo-small.png
 /scala/.ammonite/cache/
 /scala/.ammonite/history
+/tmux/.tmux/plugins/*
+!/tmux/.tmux/plugins/tpm
