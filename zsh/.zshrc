@@ -61,6 +61,8 @@ fo() {
   fi
 }
 
+eval "$(direnv hook zsh)"
+
 # Load Node Version Manager
 if [[ -f /usr/share/nvm/init-nvm.sh ]]; then
     source /usr/share/nvm/init-nvm.sh
