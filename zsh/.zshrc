@@ -52,20 +52,39 @@ fi
 # CTRL-O to open with `open` command,
 # CTRL-E or Enter key to open with the $EDITOR
 fo() {
-  local out file key
-  IFS=$'\n' out=($(fzf-tmux --query="$1" --exit-0 --expect=ctrl-o,ctrl-e))
-  key=$(head -1 <<< "$out")
-  file=$(head -2 <<< "$out" | tail -1)
-  if [[ -n "$file" ]]; then
-      [[ "$key" = ctrl-o ]] && xdg-open "$file" || eval ${=EDITOR:-vim} "$file"
-  fi
+    local out file key
+    IFS=$'\n' out=($(fzf-tmux --query="$1" --exit-0 --expect=ctrl-o,ctrl-e))
+    key=$(head -1 <<< "$out")
+    file=$(head -2 <<< "$out" | tail -1)
+    if [[ -n "$file" ]]; then
+        [[ "$key" = ctrl-o ]] && xdg-open "$file" || eval ${=EDITOR:-vim} "$file"
+    fi
 }
 
 eval "$(direnv hook zsh)"
 
 # Load Node Version Manager
+load-nvmrc() {
+    local nvmrc_path="$(nvm_find_nvmrc)"
+
+    if [ -n "$nvmrc_path" ]; then
+        local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+        if [ "$nvmrc_node_version" = "N/A" ]; then
+            nvm install
+        elif [ "$nvmrc_node_version" != "$(nvm version)" ]; then
+            nvm use
+        fi
+    elif [ -n "$(PWD=$OLDPWD nvm_find_nvmrc)" ] && [ "$(nvm version)" != "$(nvm version default)" ]; then
+        echo "Reverting to nvm default version"
+        nvm use default
+    fi
+}
+
 if [[ -f /usr/share/nvm/init-nvm.sh ]]; then
     source /usr/share/nvm/init-nvm.sh
+    add-zsh-hook chpwd load-nvmrc
+    load-nvmrc
 fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
