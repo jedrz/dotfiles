@@ -1,0 +1,13 @@
+[core]
+	autoimport = true
+	nopager = false
+	autoclip = true
+	showsafecontent = false
+	exportkeys = true
+	parsing = true
+	notifications = true
+	cliptimeout = 45
+[age]
+	usekeychain = false
+[mounts]
+	path = /home/lukasz/.password-store
