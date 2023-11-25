@@ -1,8 +1,6 @@
 [core]
 	autoimport = true
 	nopager = false
-	autoclip = true
-	showsafecontent = false
 	exportkeys = true
 	parsing = true
 	notifications = true
@@ -11,3 +9,7 @@
 	usekeychain = false
 [mounts]
 	path = /home/lukasz/.password-store
+[show]
+	safecontent = false
+[generate]
+	autoclip = true
