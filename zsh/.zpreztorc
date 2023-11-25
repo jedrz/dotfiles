@@ -94,11 +94,8 @@ zstyle ':prezto:module:prompt' theme 'pure'
 # SSH-Agent
 #
 
-# Enable ssh-agent forwarding.
-# zstyle ':prezto:module:ssh-agent' forwarding 'yes'
-
 # Set ssh-agent identities to load.
-zstyle ':prezto:module:ssh-agent' identities 'id_rsa' 'id_rsa_touk'
+zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa_touk' '~/.ssh/id_ed25519_touk'
 
 #
 # Syntax Highlighting
