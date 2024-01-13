@@ -5,6 +5,12 @@
 
 # Zsh options.
 setopt extended_glob
+setopt auto_cd
+setopt printexitvalue
+
+# prezto stub function
+function pmodload {
+}
 
 # Autoload functions you might want to use with antidote.
 ZFUNCDIR=${ZFUNCDIR:-$ZDOTDIR/functions}
@@ -25,3 +31,4 @@ antidote load
 # Extend history size
 export HISTSIZE=1000000
 export SAVEHIST=1000000
+

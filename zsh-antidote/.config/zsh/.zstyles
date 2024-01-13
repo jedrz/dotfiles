@@ -9,3 +9,5 @@
 
 # zstyle ':antidote:bundle' file ${ZDOTDIR:-~}/.zplugins.txt
 # zstyle ':antidote:bundle' use-friendly-names 'yes'
+
+zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa_touk id_ed25519_touk

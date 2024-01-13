@@ -29,6 +29,8 @@ https://github.com/peterhurford/up.zsh
 rummik/zsh-tailf
 mattmc3/zman
 agkozak/zsh-z
+lukechilds/zsh-nvm
+ptavares/zsh-sdkman
 
 
 ### Local Plugins
@@ -124,6 +126,7 @@ ohmyzsh/ohmyzsh path:plugins/copypath
 ohmyzsh/ohmyzsh path:plugins/extract
 ohmyzsh/ohmyzsh path:plugins/magic-enter
 ohmyzsh/ohmyzsh path:plugins/fancy-ctrl-z
+ohmyzsh/ohmyzsh path:plugins/ssh-agent
 
 
 ### Framework: Prezto
@@ -140,20 +143,20 @@ ohmyzsh/ohmyzsh path:plugins/fancy-ctrl-z
 
 # Prezto can be difficult to assemble because it's so interdependent.
 # Use at your own risk.
-# sorin-ionescu/prezto path:modules/helper/functions kind:autoload
-# sorin-ionescu/prezto path:modules/helper
+sorin-ionescu/prezto path:modules/helper/functions kind:autoload
+sorin-ionescu/prezto path:modules/helper
 # sorin-ionescu/prezto path:modules/environment
 # sorin-ionescu/prezto path:modules/terminal
 # sorin-ionescu/prezto path:modules/editor
-# sorin-ionescu/prezto path:modules/directory
-# sorin-ionescu/prezto path:modules/git/functions kind:autoload
-# sorin-ionescu/prezto path:modules/git
+sorin-ionescu/prezto path:modules/directory
+sorin-ionescu/prezto path:modules/git/functions kind:autoload
+sorin-ionescu/prezto path:modules/git
 
 # And Prezto has tons more...
 # sorin-ionescu/prezto path:modules/history
-# sorin-ionescu/prezto path:modules/spectrum
-# sorin-ionescu/prezto path:modules/utility/functions kind:autoload
-# sorin-ionescu/prezto path:modules/utility
+sorin-ionescu/prezto path:modules/spectrum
+sorin-ionescu/prezto path:modules/utility/functions kind:autoload
+sorin-ionescu/prezto path:modules/utility
 # sorin-ionescu/prezto path:modules/completion
 # sorin-ionescu/prezto path:modules/history-substring-search
 # sorin-ionescu/prezto path:modules/prompt/functions kind:autoload
@@ -224,3 +227,4 @@ belak/zsh-utils path:completion
 # These popular core plugins should be loaded at the end
 zsh-users/zsh-autosuggestions kind:defer
 zsh-users/zsh-history-substring-search
+unixorn/fzf-zsh-plugin
