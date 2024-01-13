@@ -96,6 +96,9 @@ path=(
   ~/.local/bin
   ~/.zplugins/fasd
   "$GOPATH/bin"
+  # Haskell
+  ~/.ghcup/bin
+  ~/.cabal/bin/
   $path
 )
 
