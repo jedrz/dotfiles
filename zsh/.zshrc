@@ -22,8 +22,8 @@ alias extract='unarchive'
 alias prettyjson='python -m json.tool'
 
 # Extend history size
-export HISTSIZE=100000
-export SAVEHIST=100000
+export HISTSIZE=1000000
+export SAVEHIST=1000000
 
 # Display date in the RPROMPT for pure theme.
 # https://github.com/sindresorhus/pure/issues/170
