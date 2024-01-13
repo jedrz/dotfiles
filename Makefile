@@ -7,9 +7,7 @@ STOW-CMD = $(STOW) --target $(HOME) -v $(STOWVERBOSE) $(STOWFLAGS)
 STOW-INSTALL = $(STOW-CMD) -R
 STOW-UNINSTALL = $(STOW-CMD) -D
 
-PKGS = \
-	R awesome clojure fonts git i3 luakit ncmpcpp pacaur password-store \
-	terminal vim xbm-icons zsh
+PKGS = git password-store terminal tmux vim vim zsh
 
 install:
 	$(STOW-INSTALL) $(PKGS)
