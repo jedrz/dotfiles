@@ -7,7 +7,7 @@ STOW-CMD = $(STOW) --target $(HOME) -v $(STOWVERBOSE) $(STOWFLAGS)
 STOW-INSTALL = $(STOW-CMD) -R
 STOW-UNINSTALL = $(STOW-CMD) -D
 
-PKGS = git password-store terminal tmux vim vim zsh
+PKGS = git password-store terminal tmux vim vim zsh-antidote atuin
 
 install:
 	$(STOW-INSTALL) $(PKGS)

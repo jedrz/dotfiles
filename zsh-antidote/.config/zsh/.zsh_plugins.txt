@@ -228,3 +228,4 @@ belak/zsh-utils path:completion
 zsh-users/zsh-autosuggestions kind:defer
 zsh-users/zsh-history-substring-search
 unixorn/fzf-zsh-plugin
+atuinsh/atuin

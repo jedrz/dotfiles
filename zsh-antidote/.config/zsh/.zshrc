@@ -44,6 +44,9 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line
 
+# Use Ctrl-r to search history
+bindkey '^r' _atuin_search_widget
+
 autoload -Uz promptinit && promptinit
 prompt powerlevel10k
 

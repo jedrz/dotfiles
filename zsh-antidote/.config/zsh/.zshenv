@@ -26,6 +26,9 @@ export M2_HOME="/opt/maven"
 # Go home
 export GOPATH="$HOME/.go"
 
+# Disable default atuin key bindings
+export ATUIN_NOBIND="true"
+
 # Private vars outside Git
 if [[ -f "$HOME/.zshenv-private" ]]; then
     source "$HOME/.zshenv-private"
