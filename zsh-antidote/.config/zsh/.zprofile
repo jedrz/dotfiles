@@ -33,7 +33,7 @@ path=(
   /{bin,sbin}
   ~/.bin
   ~/.local/bin
-  # TODO: ~/.zplugins/fasd
+  # Go
   "$GOPATH/bin"
   # Haskell
   ~/.ghcup/bin
