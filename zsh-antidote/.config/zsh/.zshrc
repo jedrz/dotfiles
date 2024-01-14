@@ -39,6 +39,11 @@ antidote load
 export HISTSIZE=1000000
 export SAVEHIST=1000000
 
+# Edit command with editor (Ctrl-x ctrl-e)
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
+
 autoload -Uz promptinit && promptinit
 prompt powerlevel10k
 
