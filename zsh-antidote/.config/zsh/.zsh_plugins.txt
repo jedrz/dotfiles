@@ -80,7 +80,7 @@ $ZDOTDIR/.aliases
 romkatv/powerlevel10k kind:fpath
 
 # Or, just load a prompt plugin the normal way.
-sindresorhus/pure
+sindresorhus/pure kind:fpath
 
 
 ### Utilities
