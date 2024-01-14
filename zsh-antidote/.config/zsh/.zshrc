@@ -47,6 +47,9 @@ bindkey "^X^E" edit-command-line
 # Use Ctrl-r to search history
 bindkey '^r' _atuin_search_widget
 
+# Enable virtualenvwrapper
+source /usr/bin/virtualenvwrapper.sh
+
 autoload -Uz promptinit && promptinit
 prompt powerlevel10k
 
