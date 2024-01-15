@@ -19,3 +19,7 @@ To uninstall them:
 To choose only some modules specify `PKGS` explicitly:
 
     $ make install PKGS=zsh
+
+## zsh
+
+zsh config is based on https://github.com/getantidote/zdotdir
