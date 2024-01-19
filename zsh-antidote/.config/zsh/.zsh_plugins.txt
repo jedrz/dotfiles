@@ -151,6 +151,7 @@ sorin-ionescu/prezto path:modules/helper
 sorin-ionescu/prezto path:modules/directory
 sorin-ionescu/prezto path:modules/git/functions kind:autoload
 sorin-ionescu/prezto path:modules/git
+sorin-ionescu/prezto path:modules/docker
 
 # And Prezto has tons more...
 # sorin-ionescu/prezto path:modules/history
