@@ -30,6 +30,6 @@ export GOPATH="$HOME/.go"
 export ATUIN_NOBIND="true"
 
 # Private vars outside Git
-if [[ -f "$HOME/.zshenv-private" ]]; then
-    source "$HOME/.zshenv-private"
+if [[ -f "${ZDOTDIR:-$HOME}/.zshenv-private" ]]; then
+    source "${ZDOTDIR:-$HOME}/.zshenv-private"
 fi

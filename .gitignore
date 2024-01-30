@@ -8,3 +8,4 @@ ncmpcpp/.ncmpcpp/error.log
 /scala/.ammonite/history
 /tmux/.tmux/plugins/*
 !/tmux/.tmux/plugins/tpm
+.zshenv-private
