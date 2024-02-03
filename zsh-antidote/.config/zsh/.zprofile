@@ -40,3 +40,9 @@ path=(
   ~/.cabal/bin/
   $path
 )
+
+# Private settings outside Git
+if [[ -f "${ZDOTDIR:-$HOME}/.zprofile-private" ]]; then
+    source "${ZDOTDIR:-$HOME}/.zprofile-private"
+fi
+
