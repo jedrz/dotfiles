@@ -35,9 +35,14 @@ autoload -Uz $fpath[1]/*(.:t)
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 antidote load
 
+# https://registerspill.thorstenball.com/p/which-command-did-you-run-1731-days
 # Extend history size
 export HISTSIZE=1000000
 export SAVEHIST=1000000
+# Record timestamp in history
+setopt EXTENDED_HISTORY
+# Share history between all sessions
+setopt SHARE_HISTORY
 
 # Edit command with editor (Ctrl-x ctrl-e)
 autoload -U edit-command-line
