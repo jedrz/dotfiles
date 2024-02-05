@@ -55,6 +55,8 @@ bindkey '^r' _atuin_search_widget
 # Enable virtualenvwrapper
 source /usr/bin/virtualenvwrapper.sh
 
+eval "$(direnv hook zsh)"
+
 autoload -Uz promptinit && promptinit
 prompt powerlevel10k
 
