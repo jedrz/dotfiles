@@ -52,6 +52,9 @@ bindkey "^X^E" edit-command-line
 # Use Ctrl-r to search history
 bindkey '^r' _atuin_search_widget
 
+# Alt-Shift-j - jq-repl
+bindkey '^[J' jq-complete
+
 # Enable virtualenvwrapper
 source /usr/bin/virtualenvwrapper.sh
 

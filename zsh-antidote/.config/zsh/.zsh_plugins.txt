@@ -31,6 +31,7 @@ mattmc3/zman
 agkozak/zsh-z
 lukechilds/zsh-nvm
 ptavares/zsh-sdkman
+reegnz/jq-zsh-plugin
 
 
 ### Local Plugins
