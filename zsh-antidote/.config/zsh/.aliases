@@ -38,3 +38,7 @@ alias zdot='cd ${ZDOTDIR:-~}'
 
 alias e='emacsclient -c'
 alias ec='emacsclient -t'
+
+# Git
+alias gwRo='git fetch origin && git reset --hard "origin/$(git rev-parse --abbrev-ref HEAD)"'
+alias gwRu='git fetch origin && git reset --hard "upstream/$(git rev-parse --abbrev-ref HEAD)"'
