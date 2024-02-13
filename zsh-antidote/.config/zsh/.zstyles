@@ -11,4 +11,3 @@
 # zstyle ':antidote:bundle' use-friendly-names 'yes'
 
 zstyle ':completion:*' menu select
-zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa_touk id_ed25519_touk
