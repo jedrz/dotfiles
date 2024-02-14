@@ -27,3 +27,5 @@
 	user = ljd
 [pull]
 	ff = only
+[merge]
+	conflictstyle = diff3
