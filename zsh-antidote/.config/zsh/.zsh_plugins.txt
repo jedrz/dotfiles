@@ -28,7 +28,6 @@
 https://github.com/peterhurford/up.zsh
 rummik/zsh-tailf
 mattmc3/zman
-agkozak/zsh-z
 lukechilds/zsh-nvm
 ptavares/zsh-sdkman
 reegnz/jq-zsh-plugin

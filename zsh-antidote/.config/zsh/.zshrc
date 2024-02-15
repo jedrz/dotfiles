@@ -49,6 +49,26 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line
 
+# Enable zoxide - smart cd with z and zi commands
+eval "$(zoxide init zsh)"
+# Allow non-consecutive characters
+# https://github.com/ajeetdsouza/zoxide/issues/388#issuecomment-1347808410
+function __zoxide_z() {
+    if [[ "$#" -eq 0 ]]; then
+        __zoxide_cd ~
+    elif [[ "$#" -eq 1 ]] && { [[ -d "$1" ]] || [[ "$1" = '-' ]] || [[ "$1" =~ ^[-+][0-9]$ ]]; }; then
+        __zoxide_cd "$1"
+    elif [[ "$@[-1]" == "${__zoxide_z_prefix}"* ]]; then
+        \builtin local result="${@[-1]}"
+        __zoxide_cd "${result:${#__zoxide_z_prefix}}"
+    else
+        \builtin local IFS=' '
+        \builtin local result
+        result="$(\command zoxide query --list --exclude "$(__zoxide_pwd)" | \command fzf --no-sort --filter "$*" | \command head -n 1)" &&
+            __zoxide_cd "${result}"
+    fi
+}
+
 # Use Ctrl-r to search history
 bindkey '^r' _atuin_search_widget
 
