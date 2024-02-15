@@ -10,16 +10,20 @@ Clone this repository with `--recursive` flag to download all submodules too:
 
 To install all modules:
 
-    $ make
+    $ stow .
 
 To uninstall them:
 
-    $ make uninstall
+    $ stow -D .
 
-To choose only some modules specify `PKGS` explicitly:
+To install only some modules:
 
-    $ make install PKGS=zsh
+    $ stow tmux zsh
 
 ## zsh
 
 zsh config is based on https://github.com/getantidote/zdotdir
+
+Dependencies:
+- [atuin](https://atuin.sh/) - better history
+- [zoxide](https://github.com/ajeetdsouza/zoxide) - for `z` and `zi`
