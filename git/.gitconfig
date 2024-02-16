@@ -14,18 +14,36 @@
     helper = !pass-git-helper $@
     helper = cache --timeout=86400
 [push]
-    default = simple
+    autoSetupRemote = true
 [includeIf "gitdir:~/TouK/"]
     path = ~/.gitconfig-TouK
 [alias]
     pullall = !git pull && git submodule update --init --recursive
     branch-reset-head = !sh -c '[ "$#" -ne 1 ] && echo \"branch-reset-head <new-branch>\" || (git branch $1 && git reset --hard HEAD~1 && git checkout $1)' -
-[pager]
-    diff = diff-so-fancy | less --tabs=1,5 -RFX
-    show = diff-so-fancy | less --tabs=1,5 -RFX
+[core]
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+[diff]
+    colorMoved = default
+    algorithm = histogram
 [gitlab "gitlab.touk.pl/api/v4"]
-	user = ljd
+    user = ljd
 [pull]
-	ff = only
+    ff = only
 [merge]
-	conflictstyle = diff3
+    conflictstyle = zdiff3
+[rebase]
+    autosquash = true
+    autostash = true
+[rerere]
+    enabled = true
+[transfer]
+    fsckobjects = true
+[fetch]
+    fsckobjects = true
+[receive]
+    fsckObjects = true
