@@ -10,11 +10,11 @@ Clone this repository with `--recursive` flag to download all submodules too:
 
 To install all modules:
 
-    $ stow .
+    $ stow */
 
 To uninstall them:
 
-    $ stow -D .
+    $ stow -D */
 
 To install only some modules:
 
