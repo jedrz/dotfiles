@@ -42,3 +42,6 @@ alias ec='emacsclient -t'
 # Git
 alias gwRo='git fetch origin && git reset --hard "origin/$(git rev-parse --abbrev-ref HEAD)"'
 alias gwRu='git fetch origin && git reset --hard "upstream/$(git rev-parse --abbrev-ref HEAD)"'
+
+# Docker
+alias dksa='docker ps -aq | xargs docker stop'
