@@ -38,6 +38,8 @@ path=(
   # Haskell
   ~/.ghcup/bin
   ~/.cabal/bin/
+  # Doom
+  ~/.emacs.d/bin
   $path
 )
 
