@@ -30,6 +30,13 @@
 [diff]
     colorMoved = default
     algorithm = histogram
+    tool = difftastic
+[difftool]
+    prompt = false
+[difftool "difftastic"]
+    cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+    difftool = true
 [gitlab "gitlab.touk.pl/api/v4"]
     user = ljd
 [pull]
