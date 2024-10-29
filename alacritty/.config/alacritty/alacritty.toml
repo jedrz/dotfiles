@@ -1,4 +1,4 @@
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 args = ["-l", "-c", "tmux attach --index 0 || tmux"]
 
@@ -36,3 +36,5 @@ blue    = '#f38d70'
 magenta = '#a8a9eb'
 cyan    = '#85dacc'
 white   = '#fff1f3'
+
+[terminal]
